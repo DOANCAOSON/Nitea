@@ -28,6 +28,7 @@ export default {
         "color": "#FFFFFF",
         "mainstream": "#B26135",
         "headerbackgrou": "#FFF",
+        "headerbackgbtnFooter": "#FFF",
         "backgroundBtn": "#B26135",
         "textmainstream": "#B26135",
         "line": "#B26135",

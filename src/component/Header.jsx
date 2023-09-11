@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState } from "react";
+import logorps from "../img/logorps.png";
 
 const Header = () => {
   const apifake = [
@@ -24,26 +24,14 @@ const Header = () => {
 
   const [categories, setCategories] = useState(apifake);
 
-  useEffect(() => {
-    axios
-      .get(
-        "https://admin.channelcharn.us/api/list-categories"
-      )
-      .then((response) => {
-        console.log(response);
-        setCategories(response.data.data.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data: ", error);
-      });
-  }, []);
+
 
   console.log(categories);
   return (
     <div className=" w-[100%] h-[auto]">
-      <div className="w-[100%] bg-headerbackgrou py-4">
+      <div className="w-[100%] bg-colorBlack sm:bg-headerbackgrou lg:bg-headerbackgrou py-4 px-[20px] sm:px-[0px] lg:px-[0px]">
         <div>
-          <div className="flex items-center text-center justify-between w-[100%] md:w-[100%] lg:w-[1200px]  pt-[12px] m-auto text-[#333333] ">
+          <div className="flex items-center text-center justify-between w-[100%] md:w-[100%] lg:w-[1200px]  sm:pt-[12px]  lg:pt-[12px] m-auto text-[#333333] ">
             <div className="flex w-[100%] md:w-[100%] lg:w-[10%]">
               <div>
                 <div className="w-[100%] h-[100%] rounded-full text-[32px] ">
@@ -54,6 +42,7 @@ const Header = () => {
                       height="69"
                       viewBox="0 0 56 69"
                       fill="none"
+                      className="hidden lg:block sm:block"
                     >
                       <g clip-path="url(#clip0_443_408)">
                         <path
@@ -164,6 +153,7 @@ const Header = () => {
                         </clipPath>
                       </defs>
                     </svg>
+                    <img className="lg:hidden sm:hidden" src={logorps} alt="" />
                   </Link>
                 </div>
               </div>
@@ -181,6 +171,12 @@ const Header = () => {
               <div className="text-[16px] px-[28px] py-[12px] rounded-full  bg-backgroundBtn text-color cursor-pointer   ">
                 Đăng nhập
               </div>
+            </div>
+
+            <div className="items-center  flex   md:hidden lg:hidden  justify-end gap-[32px] text-[18px] font-medium  text-color ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.66602 9.33333C6.66602 8.97971 6.80649 8.64057 7.05654 8.39052C7.30659 8.14048 7.64573 8 7.99935 8H23.9993C24.353 8 24.6921 8.14048 24.9422 8.39052C25.1922 8.64057 25.3327 8.97971 25.3327 9.33333C25.3327 9.68696 25.1922 10.0261 24.9422 10.2761C24.6921 10.5262 24.353 10.6667 23.9993 10.6667H7.99935C7.64573 10.6667 7.30659 10.5262 7.05654 10.2761C6.80649 10.0261 6.66602 9.68696 6.66602 9.33333ZM6.66602 16C6.66602 15.6464 6.80649 15.3072 7.05654 15.0572C7.30659 14.8071 7.64573 14.6667 7.99935 14.6667H23.9993C24.353 14.6667 24.6921 14.8071 24.9422 15.0572C25.1922 15.3072 25.3327 15.6464 25.3327 16C25.3327 16.3536 25.1922 16.6928 24.9422 16.9428C24.6921 17.1929 24.353 17.3333 23.9993 17.3333H7.99935C7.64573 17.3333 7.30659 17.1929 7.05654 16.9428C6.80649 16.6928 6.66602 16.3536 6.66602 16ZM6.66602 22.6667C6.66602 22.313 6.80649 21.9739 7.05654 21.7239C7.30659 21.4738 7.64573 21.3333 7.99935 21.3333H23.9993C24.353 21.3333 24.6921 21.4738 24.9422 21.7239C25.1922 21.9739 25.3327 22.313 25.3327 22.6667C25.3327 23.0203 25.1922 23.3594 24.9422 23.6095C24.6921 23.8595 24.353 24 23.9993 24H7.99935C7.64573 24 7.30659 23.8595 7.05654 23.6095C6.80649 23.3594 6.66602 23.0203 6.66602 22.6667Z" fill="white" />
+              </svg>
             </div>
           </div>
         </div>

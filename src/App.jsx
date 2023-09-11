@@ -23,7 +23,7 @@ function App() {
           path="/tramtintuc"
           element={<Tramtintuc />}
         />
-        <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/detail" element={<Detail />} />
       </Routes>
       <Footer />
     </BrowserRouter>
