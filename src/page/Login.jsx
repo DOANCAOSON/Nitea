@@ -56,7 +56,7 @@ const Login = () => {
     <div className="w-[100%] lg:w-[1095px] flex justify-center mt-[56px] sm:mt-[102px] lg:mt-[102px] mx-[auto] ">
       <div className="w-[100%]">
         <div className="mb-[80px]">
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-12  p-[40px]  rounded-lg bg-color  ">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-12 px-[20px] py-[32px]   lg:p-[40px]  rounded-lg bg-color  ">
             <div className="w-[100%] md:w-[100%] lg:w-[100%]  rounded-[15px] col-span-6 lg:col-span-5 ">
               <div className="text-mainstream text-[20px] textSVNGilroy600 mb-[16px]">
                 ĐĂNG NHẬP
@@ -101,14 +101,14 @@ const Login = () => {
                     className="h-[24px] px-[12px] rounded-full mr-[12px] bg-color border-solid border-2 border-[rgba(80, 80, 80, 0.50)]"
                   ></input>
                   <label
-                    className="text-[14px] textSVNGilroy400 block w-[200px] "
+                    className="text-[14px] textSVNGilroy400 block  "
                     for="savepassword"
                   >
                     Nhớ mật khẩu
                   </label>
                 </div>
                 <div>
-                  <div>Quên mật khẩu ?</div>
+                  <div className="text-[14px] textSVNGilroy500 underline italic  ">Quên mật khẩu ?</div>
                 </div>
               </div>
               <div>
@@ -158,8 +158,8 @@ const Login = () => {
            
             </div>
 
-            <div className=" w-[100%] md:w-[100%] lg:w-[100%] col-span-6  px-[20px] py-[32px] lg:p-[0px] bg-color rounded-[15px]">
-              <h1 className="text-[28px] text-mainstream textSVNGilroy500 mb-[8px]">
+            <div className=" w-[100%] md:w-[100%] lg:w-[100%] col-span-6  bg-color rounded-[15px]">
+              <h1 className=" text-[20px] sm:text-[28px] lg:text-[28px] text-mainstream textSVNGilroy500 mb-[8px]">
                 Chưa phải là thành viên?
               </h1>
               <p className="textSVNGilroy400  text-[14px] sm:text-[16px] lg:text-[16px] text-[#505050] mb-[32px] sm:mb-[48px] lg:mb-[48px]">
