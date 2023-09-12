@@ -2,7 +2,7 @@
   margin: 0 auto;
   color: #000;
   background-color: "#F6F6F6";
-  /* overflow: hidden !important; */
+  overflow: hidden !important;
 }
 
 .slick-prev:before,
@@ -43,4 +43,15 @@
 button {
   border: none;
   outline: none;
+}
+
+.lineafter::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: -15px;
+  height: 100%;
+  width: 1px;
+  background-color: #B26135;
 }

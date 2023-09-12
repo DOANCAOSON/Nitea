@@ -64,7 +64,7 @@ const Payment = () => {
         </div>
         <div className="mb-[80px]">
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-12  lg:gap-[29px] sm:lg:gap-[29px]  rounded-lg  ">
-            <div className="w-[100%] md:w-[100%] lg:w-[100%] bg-color col-span-7 p-[40px] ">
+            <div className="w-[100%] md:w-[100%] lg:w-[100%] bg-color rounded-[15px] col-span-7 p-[40px] ">
               <div className="text-colorBlackbland text-[20px] textSVNGilroy600 mb-[16px]">
                 Địa chỉ nhận hàng
               </div>
@@ -117,7 +117,7 @@ const Payment = () => {
                 ></input>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-12  lg:gap-[29px] sm:lg:gap-[29px] mb-[16px] rounded-lg ">
-                <div className="col-span-6 flex items-center textSVNGilroy600">
+                <div className="col-span-6 flex items-center textSVNGilroy600 mb-[16px]">
                   Phương thức thanh toán
                 </div>
                 <div className="col-span-3">
@@ -247,7 +247,7 @@ const Payment = () => {
               </div>
             </div>
 
-            <div className=" w-[100%] md:w-[100%] lg:w-[100%] col-span-5 p-[40px]">
+            <div className=" w-[100%] md:w-[100%] rounded-[15px]  bg-color lg:w-[100%] col-span-5 p-[40px]">
               <div className="text-colorBlackbland text-[20px] textSVNGilroy600 mb-[16px]">
                 Đơn hàng của bạn
               </div>
@@ -349,7 +349,7 @@ const Payment = () => {
                     0đ
                   </div>
                 </div>
-                <div className="flex justify-between items-center mb-[12px]">
+                <div className="flex justify-between items-center mb-[16px]">
                   <div className="textSVNGilroy600">
                     Phí giao hàng
                   </div>
@@ -357,6 +357,17 @@ const Payment = () => {
                     0đ
                   </div>
                 </div>
+                <div className="flex sm:hidden lg:hidden w-[100%] bg-backgroundBtn justify-center items-center mb-[12px] rounded-full">
+                  <div className="flex justify-center items-center h-[48px] gap-x-[32px]">
+                    <div className="textSVNGilroy600 h-[100%] flex justify-center items-center text-color ">
+                      THANH TOÁN
+                    </div>
+                    <div className="textSVNGilroy600 h-[100%] flex justify-center items-center text-color">
+                      {totalPrice}đ
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
