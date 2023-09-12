@@ -13,6 +13,7 @@ import Detail from "./page/Detail";
 import Tramtintuc from "./page/Tramtintuc";
 import Payment from "./page/Payment";
 import Test from "./page/Test";
+import Login from "./page/Login";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/detail" element={<Detail />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </BrowserRouter>
