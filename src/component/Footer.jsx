@@ -12,21 +12,21 @@ const Footer = () => {
               </div>
             </div>
             <div className="text-left contact-container text-[#fff] lg:col-span-2">
-              <div className="text-xl mb-[20px] font-semibold">
+              <div className="text-xl mb-[20px] textSVNGilroy600">
                 Địa chỉ Nitea
               </div>
-              <p className="text-base text-color font-normal  mb-[20px]">
+              <p className="text-base text-color textSVNGilroy400  mb-[20px]">
                 101 Đống Đa, P. Thạch Thang, Quận Hải Châu,
                 Đà Nẵng
               </p>
-              <div className="text-xl mb-[20px] font-semibold ">
+              <div className="text-xl mb-[20px] textSVNGilroy600 ">
                 Địa chỉ Anle Bakery
               </div>
-              <p className="text-base text-color font-normal  mb-[20px]">
+              <p className="text-base text-color textSVNGilroy400  mb-[20px]">
                 37 Trần Quốc Toản, P. Phước Ninh, Quận Hải
                 Châu, Đà Nẵng
               </p>
-              <p className="text-base text-color font-normal  mb-[20px]">
+              <p className="text-base text-color textSVNGilroy400  mb-[20px]">
                 27 Trần Quốc Toản, P. Phước Ninh, Quận Hải
                 Châu, Đà Nẵng
               </p>
@@ -34,30 +34,30 @@ const Footer = () => {
             <div className="text-[#fff] lg:col-span-2">
               <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 justify-between mb-[38px]">
                 <div>
-                  <div className="text-xl mb-[20px] font-semibold">
+                  <div className="text-xl mb-[20px] textSVNGilroy600">
                     Thời gian mở cửa
                   </div>
-                  <p className="text-base text-color font-normal mb-[12px]">
+                  <p className="text-base text-color textSVNGilroy400 mb-[12px]">
                     Hằng ngày
                   </p>
-                  <p className="text-base text-color font-normal mb-[12px]">
+                  <p className="text-base text-color textSVNGilroy400 mb-[12px]">
                     Sáng 6:30 đến tối 21:30
                   </p>
                 </div>
                 <div>
-                  <div className="text-xl mb-[20px] font-semibold">
+                  <div className="text-xl mb-[20px] textSVNGilroy600">
                     Liên hệ Nitea
                   </div>
-                  <p className="text-base text-color font-normal mb-[12px]">
+                  <p className="text-base text-color textSVNGilroy400 mb-[12px]">
                     SĐT: 0123456789
                   </p>
-                  <p className="text-base text-color font-normal mb-[12px]">
+                  <p className="text-base text-color textSVNGilroy400 mb-[12px]">
                     niteadanang@gmail.com
                   </p>
                 </div>
               </div>
               <div className=" w-[100%]">
-                <div className="text-xl mb-[20px] font-semibold">
+                <div className="text-xl mb-[20px] textSVNGilroy600">
                   Nhận thông tin về Nitea
                 </div>
                 <div className="w-[100%] lg:w-[80%]">
@@ -80,7 +80,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="text-center my-[11px] text-base text-color font-normal ">
+        <div className="text-center my-[11px] text-base text-color textSVNGilroy400 ">
           Copyright © 2023 Nitea. All rights reserved.
         </div>
       </div>

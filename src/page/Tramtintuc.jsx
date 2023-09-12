@@ -8,38 +8,46 @@ const Tramtintuc = () => {
     <div className="w-[100%] lg:w-[1200px] flex justify-center mt-[56px] sm:mt-[102px] lg:mt-[102px] mx-[auto] ">
       <div className="w-[100%]">
         <div className="flex w-[100%] items-center gap-x-[12px] mb-[32px]  sm:mb-[64px] lg:mb-[64px]">
-          <div className="text-[28px] sm:text-[40px] lg:text-[40px]  w-[218px] sm:w-[auto] lg:w-[auto]  leading-[56px] text-mainstream font-normal px-[20px] sm:px-[0px] lg:px-[0px]  sm:whitespace-nowrap lg:whitespace-nowrap">
+          <div className="text1FTVRestiany text-[28px] sm:text-[40px] lg:text-[40px]  w-[218px] sm:w-[auto] lg:w-[auto]  leading-[56px] text-mainstream   px-[20px] sm:px-[0px] lg:px-[0px]  sm:whitespace-nowrap lg:whitespace-nowrap">
             Bản tin nóng hổi nhà Nitea
           </div>
           <div className="hidden sm:block lg:block w-[100%] h-[1px] bg-line"></div>
         </div>
         <div className="mb-[64px]">
-        <div className="text-[40px] leading-[56px] text-colorBlack font-semibold mb-[32px] px-[20px] lg:p-[0px]">
-            <div>
-            Tin nổi bật
+          <div className="leading-[56px] text-colorBlack mb-[32px] px-[20px] lg:p-[0px]">
+            <div className="text-[40px] textSVNGilroy600">
+              Tin nổi bật
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-1  lg:grid-cols-12 gap-x-[28px] px-[20px] lg:p-[0px]">
             <div className="col-span-1 w-[100%] h-[auto] lg:col-span-8  mb-[24px]  ">
-              <img  src={banner} alt="" />
+              <img src={banner} alt="" />
             </div>
             <div className="col-span-1  text-left  lg:col-span-4">
-              <div className="flex items-center h-[20px] gap-x-[8px] mb-[8px]">
-                <div className="text-colorBlackbland mb-[2px]">7/9/2023</div>
-                <div className="h-[100%] w-[1px] bg-colorBlack"></div>
-                <div className="text-textmainstream">Sự kiện</div>
+              <div className="flex items-center h-[20px]  gap-x-[8px] mb-[8px]">
+                <div className="text-colorBlackbland textSVNGilroy400 mb-[2px] text-[16px]">
+                  7/9/2023
+                </div>
+                <div className="h-[100%] w-[1px] bg-colorBlack textSVNGilroy400"></div>
+                <div className="text-textmainstream textSVNGilroy400  text-[16px] ">
+                  Sự kiện
+                </div>
               </div>
               <div>
-                <div className="text-colorBlack text-2xl font-semibold mb-[16px]">
-                  GRAND OPENING - Free 100 ly Ô-long nhài hạnh nhân
+                <div className="textSVNGilroy600  text-colorBlack text-2xl font-semibold mb-[16px]">
+                  GRAND OPENING - Free 100 ly Ô-long nhài
+                  hạnh nhân
                 </div>
                 <div>
-                  <p className="text-colorBlack text-base font-normal mb-[16px]">
-                    Thông tin chi nhánh mới của thương hiệu trà sữa Nitea toạ
-                    lạc ngay tại trung tâm Đà Nẵng đã khiến giới trẻ háo hức săn
-                    đón. Càng háo hức hơn khi Nitea quyết định dành tặng 100 ly
-                    trà sữa miễn phí vào ngày khai trương. Ngay từ 9h sáng, hàng
-                    dài các tín đồ trà sữa đã xếp hàng ...
+                  <p className="textSVNGilroy400 text-colorBlack text-base font-normal mb-[16px]">
+                    Thông tin chi nhánh mới của thương hiệu
+                    trà sữa Nitea toạ lạc ngay tại trung tâm
+                    Đà Nẵng đã khiến giới trẻ háo hức săn
+                    đón. Càng háo hức hơn khi Nitea quyết
+                    định dành tặng 100 ly trà sữa miễn phí
+                    vào ngày khai trương. Ngay từ 9h sáng,
+                    hàng dài các tín đồ trà sữa đã xếp hàng
+                    ...
                   </p>
                 </div>
               </div>
@@ -48,173 +56,212 @@ const Tramtintuc = () => {
         </div>
 
         <div className="mb-[80px]">
-          <div className="text-[40px] leading-[56px] text-colorBlack font-semibold mb-[32px] px-[20px]">
-            <div>
-            Tin nổi bật
+          <div className="text-[40px] leading-[56px] text-colorBlack  mb-[32px] px-[20px]">
+            <div className="textSVNGilroy600">
+              Tin nổi bật
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2  lg:gap-[29px] sm:lg:gap-[29px] gap-y-[40px]  rounded-lg  px-[20px] ">
-            <Link to="/detail" className=" w-[100%] md:w-[100%] lg:w-[100%]  bg-[#fff] hover:shadow-2xl  hover:ease-in transition duration-500 ">
+            <Link
+              to="/detail"
+              className=" w-[100%] md:w-[100%] lg:w-[100%]"
+            >
               <div className="rounded-lg overflow-hidden mb-[32px] ">
-                <img
-                  src={banner}
-                  className="hoverbgscaleitem hover:ease-in transition duration-500"
-                />
+                <img src={banner} />
               </div>
               <div className="flex items-center h-[20px] text-base gap-x-[8px] mb-[8px]">
-                <div className="text-colorBlackbland">7/9/2023</div>
+                <div className="text-colorBlackbland text-[16px] textSVNGilroy400">
+                  7/9/2023
+                </div>
                 <div className="h-[100%] w-[1px] bg-colorBlack"></div>
-                <div className="text-textmainstream  ">Sự kiện</div>
+                <div className="text-textmainstream text-[16px] textSVNGilroy400 ">
+                  Sự kiện
+                </div>
               </div>
               <div>
-                <div className="text-colorBlack text-2xl font-semibold mb-[16px]">
-                  GRAND OPENING - Free 100 ly Ô-long nhài hạnh nhân
+                <div className="text-colorBlack text-2xl textSVNGilroy600 mb-[16px]">
+                  GRAND OPENING - Free 100 ly Ô-long nhài
+                  hạnh nhân
                 </div>
                 <div>
-                  <p className="text-colorBlack text-base font-normal mb-[16px]">
-                    Thông tin chi nhánh mới của thương hiệu trà sữa Nitea toạ
-                    lạc ngay tại trung tâm Đà Nẵng đã khiến giới trẻ háo hức săn
-                    đón. Càng háo hức hơn khi Nitea quyết định dành tặng 100 ly
-                    trà sữa miễn phí vào ngày khai trương. Ngay từ 9h sáng, hàng
-                    dài các tín đồ trà sữa đã xếp hàng ...
+                  <p className=" text-colorBlack text-base textSVNGilroy400 mb-[16px]">
+                    Thông tin chi nhánh mới của thương hiệu
+                    trà sữa Nitea toạ lạc ngay tại trung tâm
+                    Đà Nẵng đã khiến giới trẻ háo hức săn
+                    đón. Càng háo hức hơn khi Nitea quyết
+                    định dành tặng 100 ly trà sữa miễn phí
+                    vào ngày khai trương. Ngay từ 9h sáng,
+                    hàng dài các tín đồ trà sữa đã xếp hàng
+                    ...
                   </p>
                 </div>
               </div>
             </Link>
 
-            <Link className=" w-[100%] md:w-[100%] lg:w-[100%]  bg-[#fff] hover:shadow-2xl  hover:ease-in transition duration-500 ">
+            <Link className=" w-[100%] md:w-[100%] lg:w-[100%]   ">
               <div className="rounded-s overflow-hidden mb-[20px] ">
-                <img
-                  src={banner1}
-                  className="hoverbgscaleitem hover:ease-in transition duration-500"
-                />
+                <img src={banner1} />
               </div>
               <div className="flex items-center h-[20px] gap-x-[8px] mb-[8px]">
-                <div className="text-colorBlackbland">7/9/2023</div>
+                <div className="text-colorBlackbland textSVNGilroy400 text-[16px]">
+                  7/9/2023
+                </div>
                 <div className="h-[100%] w-[1px] bg-colorBlack"></div>
-                <div className="text-textmainstream">Sự kiện</div>
+                <div className="text-textmainstream textSVNGilroy400 text-[16px]">
+                  Sự kiện
+                </div>
               </div>
               <div>
-                <div className="text-colorBlack text-2xl font-semibold mb-[16px]">
-                  GRAND OPENING - Free 100 ly Ô-long nhài hạnh nhân
+                <div className="text-colorBlack text-2xl textSVNGilroy600 mb-[16px]">
+                  GRAND OPENING - Free 100 ly Ô-long nhài
+                  hạnh nhân
                 </div>
                 <div>
-                  <p className="text-colorBlack text-base font-normal mb-[16px]">
-                    Thông tin chi nhánh mới của thương hiệu trà sữa Nitea toạ
-                    lạc ngay tại trung tâm Đà Nẵng đã khiến giới trẻ háo hức săn
-                    đón. Càng háo hức hơn khi Nitea quyết định dành tặng 100 ly
-                    trà sữa miễn phí vào ngày khai trương. Ngay từ 9h sáng, hàng
-                    dài các tín đồ trà sữa đã xếp hàng ...
+                  <p className="text-colorBlack text-base textSVNGilroy400 mb-[16px]">
+                    Thông tin chi nhánh mới của thương hiệu
+                    trà sữa Nitea toạ lạc ngay tại trung tâm
+                    Đà Nẵng đã khiến giới trẻ háo hức săn
+                    đón. Càng háo hức hơn khi Nitea quyết
+                    định dành tặng 100 ly trà sữa miễn phí
+                    vào ngày khai trương. Ngay từ 9h sáng,
+                    hàng dài các tín đồ trà sữa đã xếp hàng
+                    ...
                   </p>
                 </div>
               </div>
             </Link>
-            <Link className=" w-[100%] md:w-[100%] lg:w-[100%]  bg-[#fff] hover:shadow-2xl  hover:ease-in transition duration-500 ">
+            <Link
+              to="/detail"
+              className=" w-[100%] md:w-[100%] lg:w-[100%]"
+            >
               <div className="rounded-lg overflow-hidden mb-[32px] ">
-                <img
-                  src={banner}
-                  className="hoverbgscaleitem hover:ease-in transition duration-500"
-                />
+                <img src={banner} />
               </div>
               <div className="flex items-center h-[20px] text-base gap-x-[8px] mb-[8px]">
-                <div className="text-colorBlackbland">7/9/2023</div>
+                <div className="text-colorBlackbland text-[16px] textSVNGilroy400">
+                  7/9/2023
+                </div>
                 <div className="h-[100%] w-[1px] bg-colorBlack"></div>
-                <div className="text-textmainstream  ">Sự kiện</div>
+                <div className="text-textmainstream text-[16px] textSVNGilroy400 ">
+                  Sự kiện
+                </div>
               </div>
               <div>
-                <div className="text-colorBlack text-2xl font-semibold mb-[16px]">
-                  GRAND OPENING - Free 100 ly Ô-long nhài hạnh nhân
+                <div className="text-colorBlack text-2xl textSVNGilroy600 mb-[16px]">
+                  GRAND OPENING - Free 100 ly Ô-long nhài
+                  hạnh nhân
                 </div>
                 <div>
-                  <p className="text-colorBlack text-base font-normal mb-[16px]">
-                    Thông tin chi nhánh mới của thương hiệu trà sữa Nitea toạ
-                    lạc ngay tại trung tâm Đà Nẵng đã khiến giới trẻ háo hức săn
-                    đón. Càng háo hức hơn khi Nitea quyết định dành tặng 100 ly
-                    trà sữa miễn phí vào ngày khai trương. Ngay từ 9h sáng, hàng
-                    dài các tín đồ trà sữa đã xếp hàng ...
+                  <p className=" text-colorBlack text-base textSVNGilroy400 mb-[16px]">
+                    Thông tin chi nhánh mới của thương hiệu
+                    trà sữa Nitea toạ lạc ngay tại trung tâm
+                    Đà Nẵng đã khiến giới trẻ háo hức săn
+                    đón. Càng háo hức hơn khi Nitea quyết
+                    định dành tặng 100 ly trà sữa miễn phí
+                    vào ngày khai trương. Ngay từ 9h sáng,
+                    hàng dài các tín đồ trà sữa đã xếp hàng
+                    ...
                   </p>
                 </div>
               </div>
             </Link>
 
-            <Link className=" w-[100%] md:w-[100%] lg:w-[100%]  bg-[#fff] hover:shadow-2xl  hover:ease-in transition duration-500 ">
+            <Link className=" w-[100%] md:w-[100%] lg:w-[100%]   ">
               <div className="rounded-s overflow-hidden mb-[20px] ">
-                <img
-                  src={banner1}
-                  className="hoverbgscaleitem hover:ease-in transition duration-500"
-                />
+                <img src={banner1} />
               </div>
               <div className="flex items-center h-[20px] gap-x-[8px] mb-[8px]">
-                <div className="text-colorBlackbland">7/9/2023</div>
+                <div className="text-colorBlackbland textSVNGilroy400 text-[16px]">
+                  7/9/2023
+                </div>
                 <div className="h-[100%] w-[1px] bg-colorBlack"></div>
-                <div className="text-textmainstream">Sự kiện</div>
+                <div className="text-textmainstream textSVNGilroy400 text-[16px]">
+                  Sự kiện
+                </div>
               </div>
               <div>
-                <div className="text-colorBlack text-2xl font-semibold mb-[16px]">
-                  GRAND OPENING - Free 100 ly Ô-long nhài hạnh nhân
+                <div className="text-colorBlack text-2xl textSVNGilroy600 mb-[16px]">
+                  GRAND OPENING - Free 100 ly Ô-long nhài
+                  hạnh nhân
                 </div>
                 <div>
-                  <p className="text-colorBlack text-base font-normal mb-[16px]">
-                    Thông tin chi nhánh mới của thương hiệu trà sữa Nitea toạ
-                    lạc ngay tại trung tâm Đà Nẵng đã khiến giới trẻ háo hức săn
-                    đón. Càng háo hức hơn khi Nitea quyết định dành tặng 100 ly
-                    trà sữa miễn phí vào ngày khai trương. Ngay từ 9h sáng, hàng
-                    dài các tín đồ trà sữa đã xếp hàng ...
+                  <p className="text-colorBlack text-base textSVNGilroy400 mb-[16px]">
+                    Thông tin chi nhánh mới của thương hiệu
+                    trà sữa Nitea toạ lạc ngay tại trung tâm
+                    Đà Nẵng đã khiến giới trẻ háo hức săn
+                    đón. Càng háo hức hơn khi Nitea quyết
+                    định dành tặng 100 ly trà sữa miễn phí
+                    vào ngày khai trương. Ngay từ 9h sáng,
+                    hàng dài các tín đồ trà sữa đã xếp hàng
+                    ...
                   </p>
                 </div>
               </div>
             </Link>
-            <Link className=" w-[100%] md:w-[100%] lg:w-[100%]  bg-[#fff] hover:shadow-2xl  hover:ease-in transition duration-500 ">
+            <Link
+              to="/detail"
+              className=" w-[100%] md:w-[100%] lg:w-[100%]"
+            >
               <div className="rounded-lg overflow-hidden mb-[32px] ">
-                <img
-                  src={banner}
-                  className="hoverbgscaleitem hover:ease-in transition duration-500"
-                />
+                <img src={banner} />
               </div>
               <div className="flex items-center h-[20px] text-base gap-x-[8px] mb-[8px]">
-                <div className="text-colorBlackbland">7/9/2023</div>
+                <div className="text-colorBlackbland text-[16px] textSVNGilroy400">
+                  7/9/2023
+                </div>
                 <div className="h-[100%] w-[1px] bg-colorBlack"></div>
-                <div className="text-textmainstream  ">Sự kiện</div>
+                <div className="text-textmainstream text-[16px] textSVNGilroy400 ">
+                  Sự kiện
+                </div>
               </div>
               <div>
-                <div className="text-colorBlack text-2xl font-semibold mb-[16px]">
-                  GRAND OPENING - Free 100 ly Ô-long nhài hạnh nhân
+                <div className="text-colorBlack text-2xl textSVNGilroy600 mb-[16px]">
+                  GRAND OPENING - Free 100 ly Ô-long nhài
+                  hạnh nhân
                 </div>
                 <div>
-                  <p className="text-colorBlack text-base font-normal mb-[16px]">
-                    Thông tin chi nhánh mới của thương hiệu trà sữa Nitea toạ
-                    lạc ngay tại trung tâm Đà Nẵng đã khiến giới trẻ háo hức săn
-                    đón. Càng háo hức hơn khi Nitea quyết định dành tặng 100 ly
-                    trà sữa miễn phí vào ngày khai trương. Ngay từ 9h sáng, hàng
-                    dài các tín đồ trà sữa đã xếp hàng ...
+                  <p className=" text-colorBlack text-base textSVNGilroy400 mb-[16px]">
+                    Thông tin chi nhánh mới của thương hiệu
+                    trà sữa Nitea toạ lạc ngay tại trung tâm
+                    Đà Nẵng đã khiến giới trẻ háo hức săn
+                    đón. Càng háo hức hơn khi Nitea quyết
+                    định dành tặng 100 ly trà sữa miễn phí
+                    vào ngày khai trương. Ngay từ 9h sáng,
+                    hàng dài các tín đồ trà sữa đã xếp hàng
+                    ...
                   </p>
                 </div>
               </div>
             </Link>
 
-            <Link className=" w-[100%] md:w-[100%] lg:w-[100%]  bg-[#fff] hover:shadow-2xl  hover:ease-in transition duration-500 ">
+            <Link className=" w-[100%] md:w-[100%] lg:w-[100%]   ">
               <div className="rounded-s overflow-hidden mb-[20px] ">
-                <img
-                  src={banner1}
-                  className="hoverbgscaleitem hover:ease-in transition duration-500"
-                />
+                <img src={banner1} />
               </div>
               <div className="flex items-center h-[20px] gap-x-[8px] mb-[8px]">
-                <div className="text-colorBlackbland">7/9/2023</div>
+                <div className="text-colorBlackbland textSVNGilroy400 text-[16px]">
+                  7/9/2023
+                </div>
                 <div className="h-[100%] w-[1px] bg-colorBlack"></div>
-                <div className="text-textmainstream">Sự kiện</div>
+                <div className="text-textmainstream textSVNGilroy400 text-[16px]">
+                  Sự kiện
+                </div>
               </div>
               <div>
-                <div className="text-colorBlack text-2xl font-semibold mb-[16px]">
-                  GRAND OPENING - Free 100 ly Ô-long nhài hạnh nhân
+                <div className="text-colorBlack text-2xl textSVNGilroy600 mb-[16px]">
+                  GRAND OPENING - Free 100 ly Ô-long nhài
+                  hạnh nhân
                 </div>
                 <div>
-                  <p className="text-colorBlack text-base font-normal mb-[16px]">
-                    Thông tin chi nhánh mới của thương hiệu trà sữa Nitea toạ
-                    lạc ngay tại trung tâm Đà Nẵng đã khiến giới trẻ háo hức săn
-                    đón. Càng háo hức hơn khi Nitea quyết định dành tặng 100 ly
-                    trà sữa miễn phí vào ngày khai trương. Ngay từ 9h sáng, hàng
-                    dài các tín đồ trà sữa đã xếp hàng ...
+                  <p className="text-colorBlack text-base textSVNGilroy400 mb-[16px]">
+                    Thông tin chi nhánh mới của thương hiệu
+                    trà sữa Nitea toạ lạc ngay tại trung tâm
+                    Đà Nẵng đã khiến giới trẻ háo hức săn
+                    đón. Càng háo hức hơn khi Nitea quyết
+                    định dành tặng 100 ly trà sữa miễn phí
+                    vào ngày khai trương. Ngay từ 9h sáng,
+                    hàng dài các tín đồ trà sữa đã xếp hàng
+                    ...
                   </p>
                 </div>
               </div>
@@ -288,7 +335,7 @@ const Tramtintuc = () => {
           </li>
         </div>
 
-       <Monitor/>
+        <Monitor />
       </div>
     </div>
   );

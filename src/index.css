@@ -2,9 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "SVNGilroy600"; /* Tên của phông chữ */
+  src: url("./assets/fontface/FontGilroyVHFull/SVN-GilroySemiBold.otf")
+    format("woff2");
+}
+@font-face {
+  font-family: "SVNGilroy500"; /* Tên của phông chữ */
+  src: url("./assets/fontface/FontGilroyVHFull/SVN-GilroyMedium.otf")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "SVNGilroy400"; /* Tên của phông chữ */
+  src: url("./assets/fontface/FontGilroyVHFull/SVN-GilroyRegular.otf")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "text1FTVRestiany"; /* Tên của phông chữ */
+  src: url("./assets/fontface/FontGilroyVHFull/1FTVRestiany.ttf")
+    format("woff2");
+}
 :root {
   line-height: 1.5;
-  font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   font-synthesis: none;
@@ -18,7 +39,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
 }
 img {
   width: 100%;
@@ -34,4 +54,18 @@ li {
 button {
   outline: none;
   border: none;
+}
+.textSVNGilroy600 {
+  font-family: "SVNGilroy600" !important;
+}
+.textSVNGilroy500 {
+  font-family: "SVNGilroy500" !important;
+}
+
+.textSVNGilroy400 {
+  font-family: "SVNGilroy400" !important;
+}
+
+.text1FTVRestiany {
+  font-family: "text1FTVRestiany" !important;
 }
