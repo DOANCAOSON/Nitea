@@ -16,16 +16,19 @@ const Footer = () => {
                 Địa chỉ Nitea
               </div>
               <p className="text-base text-color font-normal  mb-[20px]">
-                101 Đống Đa, P. Thạch Thang, Quận Hải Châu, Đà Nẵng
+                101 Đống Đa, P. Thạch Thang, Quận Hải Châu,
+                Đà Nẵng
               </p>
               <div className="text-xl mb-[20px] font-semibold ">
                 Địa chỉ Anle Bakery
               </div>
               <p className="text-base text-color font-normal  mb-[20px]">
-                37 Trần Quốc Toản, P. Phước Ninh, Quận Hải Châu, Đà Nẵng
+                37 Trần Quốc Toản, P. Phước Ninh, Quận Hải
+                Châu, Đà Nẵng
               </p>
               <p className="text-base text-color font-normal  mb-[20px]">
-                27 Trần Quốc Toản, P. Phước Ninh, Quận Hải Châu, Đà Nẵng
+                27 Trần Quốc Toản, P. Phước Ninh, Quận Hải
+                Châu, Đà Nẵng
               </p>
             </div>
             <div className="text-[#fff] lg:col-span-2">
@@ -60,7 +63,11 @@ const Footer = () => {
                 <div className="w-[100%] lg:w-[80%]">
                   <div className="flex justify-between bg-headerbackgbtnFooter h-[56px] items-center w-[100%] sm:w-[75%] lg:w-[100%] ">
                     <div className="h-[100%] text-[#21212180]">
-                      <input className="h-[100%] w-[100%] px-[16px]  lg:px-[16px] " type="text"  placeholder="Nhập email của bạn"/>
+                      <input
+                        className="h-[100%] w-[100%] px-[16px]  lg:px-[16px] bg-color "
+                        type="text"
+                        placeholder="Nhập email của bạn"
+                      />
                     </div>
                     <div className="mr-[1px]">
                       <div className="w-[100px] h-[54px] bg-colorBlack flex justify-center items-center">
