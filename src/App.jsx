@@ -11,6 +11,8 @@ import {
 } from "react-router-dom";
 import Detail from "./page/Detail";
 import Tramtintuc from "./page/Tramtintuc";
+import Payment from "./page/Payment";
+import Test from "./page/Test";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           element={<Tramtintuc />}
         />
         <Route path="/detail" element={<Detail />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
       <Footer />
     </BrowserRouter>

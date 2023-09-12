@@ -16,6 +16,7 @@ export default {
         "backgroundBtn": "#B26135",
         "textmainstream": "#B26135",
         "line": "#B26135",
+        "linepayment": "rgba(80, 80, 80, 0.50)"
       },
       boxShadow: {
         'boxshadowbottom': '0px 4px 8px rgba(0, 0, 0, 0.2)',
