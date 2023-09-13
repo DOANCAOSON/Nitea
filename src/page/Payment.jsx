@@ -270,55 +270,59 @@ const Payment = () => {
               <div className="bg-linepayment w-[100%] h-[1px] mb-[40px]  sm:mb-[41px] lg:mb-[41px]"></div>
               <div className="mb-[44px]">
                 <div className="text-colorBlack  mb-[16px]">
-                  {products.map((product) => (
-                    <div
-                      key={product.id}
-                      className="w-[285px]  mb-[49px]"
-                    >
-                      <div className="flex justify-end items-center gap-x-[44px]">
-                        <div className="w-[28px] h-[64px]">
-                          <img src={product.img} alt="" />
-                        </div>
-                        <div>
-                          <div className="textSVNGilroy600 mb-[18px]">
-                            {product.name}
+                  {products.map((product) => {
+                    const formattedPrice =
+                      product.price.toLocaleString();
+                    return (
+                      <div
+                        key={product.id}
+                        className="w-[285px]  mb-[49px]"
+                      >
+                        <div className="flex justify-end items-center gap-x-[44px]">
+                          <div className="w-[28px] h-[64px]">
+                            <img src={product.img} alt="" />
                           </div>
-                          <div className="flex">
-                            <div className="flex w-[72px] rounded-full justify-between items-center  border-[2px] border-colorBlack mr-[13px] px-[12px]">
-                              <div
-                                onClick={() =>
-                                  decreaseQuantity(
-                                    product.id,
-                                    product.price
-                                  )
-                                }
-                                className="textSVNGilroy600"
-                              >
-                                -
+                          <div>
+                            <div className="textSVNGilroy600 mb-[18px]">
+                              {product.name}
+                            </div>
+                            <div className="flex">
+                              <div className="flex w-[72px] rounded-full justify-between items-center  border-[2px] border-colorBlack mr-[13px] px-[12px]">
+                                <div
+                                  onClick={() =>
+                                    decreaseQuantity(
+                                      product.id,
+                                      product.price
+                                    )
+                                  }
+                                  className="textSVNGilroy600"
+                                >
+                                  -
+                                </div>
+                                <div className="textSVNGilroy600">
+                                  {product.quantity}
+                                </div>
+                                <div
+                                  onClick={() =>
+                                    increaseQuantity(
+                                      product.id,
+                                      product.price
+                                    )
+                                  }
+                                  className="textSVNGilroy600"
+                                >
+                                  +
+                                </div>
                               </div>
                               <div className="textSVNGilroy600">
-                                {product.quantity}
+                                {formattedPrice}đ
                               </div>
-                              <div
-                                onClick={() =>
-                                  increaseQuantity(
-                                    product.id,
-                                    product.price
-                                  )
-                                }
-                                className="textSVNGilroy600"
-                              >
-                                +
-                              </div>
-                            </div>
-                            <div className="textSVNGilroy600">
-                              {product.price}đ
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
 
@@ -329,7 +333,7 @@ const Payment = () => {
                     Tổng
                   </div>
                   <div className="textSVNGilroy600">
-                    {totalPrice}đ
+                    {totalPrice.toLocaleString()}đ
                   </div>
                 </div>
                 <div className="flex justify-between items-center mb-[12px]">
