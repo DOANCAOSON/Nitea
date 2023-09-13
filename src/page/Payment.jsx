@@ -53,6 +53,29 @@ const Payment = () => {
     setTotalPrice(newTotalPrice);
   }, [products]);
 
+  const [div1Color, setDiv1Color] = useState(
+    "2px solid #A8A8A8"
+  );
+  const [div1BtnPay, setDiv1BtnPay] = useState("#A8A8A8");
+  const [div2BtnPay, setDiv2BtnPay] = useState("#A8A8A8");
+  const [div2Color, setDiv2Color] = useState(
+    "2px solid #A8A8A8"
+  );
+
+  const handleDiv1Click = () => {
+    setDiv1Color("2px solid #B26135");
+    setDiv2BtnPay("#A8A8A8");
+    setDiv1BtnPay("#B26135");
+    setDiv2Color("2px solid #A8A8A8");
+  };
+
+  const handleDiv2Click = () => {
+    setDiv2Color("2px solid #B26135");
+    setDiv1Color("2px solid #A8A8A8");
+    setDiv1BtnPay("#A8A8A8");
+    setDiv2BtnPay("#B26135");
+  };
+
   return (
     <div className="w-[100%] lg:w-[1200px] flex justify-center mt-[56px] sm:mt-[102px] lg:mt-[102px] mx-[auto] ">
       <div className="w-[100%]">
@@ -121,7 +144,11 @@ const Payment = () => {
                   Phương thức thanh toán
                 </div>
                 <div className="col-span-3">
-                  <div className="w-[130px] h-[120px] rounded-[12px] flex justify-center items-center   bg-color border-solid border-2 border-[rgba(80, 80, 80, 0.50)]">
+                  <div
+                    style={{ border: div1Color }}
+                    onClick={handleDiv1Click}
+                    className={`w-[130px] h-[120px] rounded-[12px] flex justify-center items-center`}
+                  >
                     <div>
                       <div className="flex justify-center">
                         <svg
@@ -133,49 +160,58 @@ const Payment = () => {
                         >
                           <path
                             d="M22.166 32.0834C22.166 34.3467 23.916 36.1667 26.0627 36.1667H30.4493C32.316 36.1667 33.8327 34.58 33.8327 32.5967C33.8327 30.4734 32.8994 29.7034 31.5227 29.2134L24.4993 26.7634C23.1227 26.2734 22.1894 25.5267 22.1894 23.3801C22.1894 21.4201 23.706 19.8101 25.5727 19.8101H29.9593C32.106 19.8101 33.856 21.6301 33.856 23.8934"
-                            stroke="#A8A8A8"
+                            stroke={div1BtnPay}
                             strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                           />
                           <path
                             d="M28 17.5V38.5"
-                            stroke="#A8A8A8"
+                            stroke={div1BtnPay}
                             strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                           />
                           <path
                             d="M51.3327 28C51.3327 40.88 40.8794 51.3333 27.9994 51.3333C15.1193 51.3333 4.66602 40.88 4.66602 28C4.66602 15.12 15.1193 4.66663 27.9994 4.66663"
-                            stroke="#A8A8A8"
+                            stroke={div1BtnPay}
                             strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                           />
                           <path
                             d="M51.3333 14V4.66663H42"
-                            stroke="#A8A8A8"
+                            stroke={div1BtnPay}
                             strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                           />
                           <path
                             d="M39.666 16.3333L51.3327 4.66663"
-                            stroke="#A8A8A8"
+                            stroke={div1BtnPay}
                             strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                           />
                         </svg>
                       </div>
-                      <div className="flex justify-center">
+                      <div
+                        style={{
+                          color: div1BtnPay,
+                        }}
+                        className={`flex justify-center`}
+                      >
                         CK ngân hàng
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="col-span-3">
-                  <div className="w-[130px] h-[120px] rounded-[12px] flex justify-center items-center   bg-color border-solid border-2 border-[rgba(80, 80, 80, 0.50)]">
+                  <div
+                    style={{ border: div2Color }}
+                    onClick={handleDiv2Click}
+                    className="w-[130px] h-[120px] rounded-[12px] flex justify-center items-center "
+                  >
                     <div>
                       <div className="flex justify-center">
                         <svg
@@ -187,7 +223,7 @@ const Payment = () => {
                         >
                           <path
                             d="M45.0336 18.98V30.9967C45.0336 38.1833 40.9269 41.2633 34.7669 41.2633H14.2569C13.2069 41.2633 12.2036 41.1701 11.2702 40.9601C10.6869 40.8667 10.1269 40.7034 9.61358 40.5167C6.11358 39.2101 3.99023 36.1767 3.99023 30.9967V18.98C3.99023 11.7933 8.09689 8.71338 14.2569 8.71338H34.7669C39.9936 8.71338 43.7502 10.93 44.7536 15.9934C44.9169 16.9267 45.0336 17.8833 45.0336 18.98Z"
-                            stroke="#B26135"
+                            stroke={div2BtnPay}
                             strokeWidth="2"
                             strokeMiterlimit="10"
                             strokeLinecap="round"
@@ -195,7 +231,7 @@ const Payment = () => {
                           />
                           <path
                             d="M52.0368 25.9802V37.997C52.0368 45.1836 47.9301 48.2635 41.7701 48.2635H21.2601C19.5334 48.2635 17.9701 48.0303 16.6168 47.517C13.8401 46.4903 11.9501 44.367 11.2734 40.9603C12.2068 41.1703 13.2101 41.2635 14.2601 41.2635H34.7701C40.9301 41.2635 45.0368 38.1836 45.0368 30.997V18.9802C45.0368 17.8836 44.9435 16.9037 44.7568 15.9937C49.1901 16.927 52.0368 20.0536 52.0368 25.9802Z"
-                            stroke="#B26135"
+                            stroke={div2BtnPay}
                             strokeWidth="2"
                             strokeMiterlimit="10"
                             strokeLinecap="round"
@@ -203,7 +239,7 @@ const Payment = () => {
                           />
                           <path
                             d="M24.496 31.1598C27.898 31.1598 30.656 28.4018 30.656 24.9998C30.656 21.5977 27.898 18.8397 24.496 18.8397C21.0939 18.8397 18.3359 21.5977 18.3359 24.9998C18.3359 28.4018 21.0939 31.1598 24.496 31.1598Z"
-                            stroke="#B26135"
+                            stroke={div2BtnPay}
                             strokeWidth="2"
                             strokeMiterlimit="10"
                             strokeLinecap="round"
@@ -211,7 +247,7 @@ const Payment = () => {
                           />
                           <path
                             d="M11.1543 19.8667V30.1334"
-                            stroke="#B26135"
+                            stroke={div2BtnPay}
                             strokeWidth="2"
                             strokeMiterlimit="10"
                             strokeLinecap="round"
@@ -219,7 +255,7 @@ const Payment = () => {
                           />
                           <path
                             d="M37.8516 19.8673V30.134"
-                            stroke="#B26135"
+                            stroke={div2BtnPay}
                             strokeWidth="2"
                             strokeMiterlimit="10"
                             strokeLinecap="round"
@@ -227,7 +263,12 @@ const Payment = () => {
                           />
                         </svg>
                       </div>
-                      <div className="flex justify-center">
+                      <div
+                        style={{
+                          color: div2BtnPay,
+                        }}
+                        className={`flex justify-center`}
+                      >
                         Tiền mặt
                       </div>
                     </div>
