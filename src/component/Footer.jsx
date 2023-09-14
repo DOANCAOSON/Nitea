@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="flex justify-center bg-[#000] text-text-#0000">
       <div>
         <div className="w-[100%] sm:w-[100%] lg:w-[1200px] flex mx-[auto] px-[20px]">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[50px]  rounded-lg my-[60px]  ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-x-[50px]  rounded-lg pt-[60px]  ">
             <div className="text-[#fff]">
               <div className="w-[185px] h-[123px] ">
                 <img src={logofooter} alt="" />
@@ -80,7 +80,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="text-center my-[11px] text-base text-color textSVNGilroy400 ">
+        <div className="text-center mt-[40px] mb-[11px] text-base text-color textSVNGilroy400 ">
           Copyright © 2023 Nitea. All rights reserved.
         </div>
       </div>
