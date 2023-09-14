@@ -14,6 +14,8 @@ import Tramtintuc from "./page/Tramtintuc";
 import Payment from "./page/Payment";
 import Test from "./page/Test";
 import Login from "./page/Login";
+import ProductDetail from "./page/ProductDetail";
+import ProductList from "./page/ProductList";
 
 function App() {
   return (
@@ -30,6 +32,14 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/test" element={<Test />} />
         <Route path="/login" element={<Login />} />
+        <Route
+          path="/productdetail"
+          element={<ProductDetail />}
+        />
+        <Route
+          path="/productlist"
+          element={<ProductList />}
+        />
       </Routes>
       <Footer />
     </BrowserRouter>

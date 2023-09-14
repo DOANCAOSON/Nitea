@@ -80,7 +80,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="text-center mt-[40px] mb-[11px] text-base text-color textSVNGilroy400 ">
+        <div className="text-center mt-[40px] mb-[11px] text-[16px] text-color textSVNGilroy400 ">
           Copyright © 2023 Nitea. All rights reserved.
         </div>
       </div>
