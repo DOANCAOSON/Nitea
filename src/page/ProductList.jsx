@@ -270,7 +270,7 @@ const ProductList = () => {
                     Trà trái cây
                   </div>
                 </div>
-                <div className="grid w-[100%] grid-cols-12 md:grid-cols-12  lg:grid-cols-12 gap-[20px]  lg:gap-[32px]">
+                <div className="grid w-[100%] grid-cols-12 md:grid-cols-12  lg:grid-cols-12 gap-[20px]  lg:gap-[32px] px-[20px] lg:p-0">
                   {fakeapiproductlistitem.map(
                     (item) => {
                       return (
