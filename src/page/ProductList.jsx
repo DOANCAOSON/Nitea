@@ -6,6 +6,8 @@ import bankem from "../img/bankem.png";
 import cart2 from "../img/card2.png";
 import cart3 from "../img/card3.png";
 import Monitor from "../component/Monitor";
+import Sldier from "./Sldier";
+import Sliderlist from "../component/Sliderlist";
 
 // Tạo danh sách sản phẩm giả
 const fakeapiproductcatentrylist = [
@@ -84,44 +86,44 @@ const ProductList = () => {
 
 
 
-  const doUongProducts = fakeapiproductlist.filter(product => product.category === category);
+  // const doUongProducts = fakeapiproductlist.filter(product => product.category === category);
 
 
 
 
-  const [white, setWither] = useState(0);
-  const slder_wrapper = useRef(null);
+  // const [white, setWither] = useState(0);
+  // const slder_wrapper = useRef(null);
 
-  const moveSlider = (direction) => {
-    const slider = slder_wrapper.current;
-    if (slider) {
-      const currentX = slider.scrollLeft;
-      const cardWidth = slider.offsetWidth;
-      const offset =
-        direction === "left" ? -cardWidth : cardWidth;
-      slider.scrollTo({
-        left: currentX + offset,
-        behavior: "smooth",
-      });
-    }
-  };
+  // const moveSlider = (direction) => {
+  //   const slider = slder_wrapper.current;
+  //   if (slider) {
+  //     const currentX = slider.scrollLeft;
+  //     const cardWidth = slider.offsetWidth;
+  //     const offset =
+  //       direction === "left" ? -cardWidth : cardWidth;
+  //     slider.scrollTo({
+  //       left: currentX + offset,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // };
 
-  // Tạo một mảng mới để lưu các phần tử có category giống nhau
+  // // Tạo một mảng mới để lưu các phần tử có category giống nhau
 
-  useEffect(() => {
-    setWither(
-      slder_wrapper.current.scrollWidth -
-      slder_wrapper.current.offsetWidth
-    );
-  });
+  // useEffect(() => {
+  //   setWither(
+  //     slder_wrapper.current.scrollWidth -
+  //     slder_wrapper.current.offsetWidth
+  //   );
+  // });
 
   return (
-    <div className="pt-[102px] bg-color">
-      <div className="grid grid-cols-12  w-[100%] lg:w-[1200px] gap-[16px]  m-[auto] mb-[100px] ">
-        <div className="col-span-12  lg:col-span-4">
-          <div className=" lg:w-[308px] mt-[32px]">
-            <div className="text-[28px] lg:text-[40px] w-[308px] mb-[18px] text1FTVRestiany px-[20px] lg:px-[0px]">
-              Sản phẩm <br className="hidden " />
+    <div className="pt-[102px] lg:w-[1200px] mx-[auto] overflow-hidden">
+      <div className="flex w-[100%] flex-wrap lg:flex-nowrap gap-[20px]  m-[auto] mb-[100px] ">
+        <div className="">
+          <div className=" w-[100%] px-[20px] lg:w-[278px] mt-[32px]">
+            <div className="text-[28px] lg:text-[40px] w-[100%] mb-[18px] text1FTVRestiany lg:px-[0px]">
+              Sản phẩm <br className="hidden  " />
               <span className="text-[#A0AA62]">MỚI</span>
             </div>
             <div className="hidden sm:block lg:block">
@@ -132,66 +134,14 @@ const ProductList = () => {
             </div>
           </div>
         </div>
-
-        <div className="col-span-12 lg:col-span-8">
-          <div className="container flex justify-center items-center w-[100%] flex-col relative px-[20px] lg:px-[0px] ">
-            <motion.div
-              ref={slder_wrapper}
-              whileTap={{ cursor: "grabbing" }}
-              className="slider_wraper w-[100%] overflow-hidden flex "
-            >
-              <motion.div
-                drag="x"
-                dragConstraints={{ right: 0, left: -white }}
-                className="inner_crousel inline-flex gap-[14px]"
-              >
-                <div className="flex w-[100%] gap-[20px]  lg:gap-[32px]">
-                  {fakeapiproductlistitem.map(
-                    (item) => {
-                      return (
-                        <div
-                          key={item.id}
-                          className="flex w-[157px]  lg:h-[auto] lg:w-[380px] p-[32px]  justify-center items-center bg-[#F6F6F6]  rounded-[15px]"
-                        >
-                          <div className="w-[100%] ">
-                            <div className="flex justify-center w-[100%] mb-[30px] lg:mb-[50px]">
-                              <div className="w-[59px] h-[141px] lg:w-[123px] lg:h-[279px] ">
-                                <img
-                                  src={item.image}
-                                  alt={item.image}
-                                />
-                              </div>
-                            </div>
-                            <div className="mb-[36px] lg:mb-[40px] w-[100%]">
-                              <div className="h-[60px] lg:h-[auto] text-[16px] lg:text-[20px] textSVNGilroy600 mb-[8px] text-center w-[100%]">
-                                {item.name}
-                              </div>
-                              <div className="text-[16px] lg:text-[24px] leading-[33px] text-center w-[100%]">
-                                {item.price}đ
-                              </div>
-                            </div>
-                            <div className="w-[100%]">
-                              <div className="w-[100%]">
-                                <button className="bg-[#A1AB62] w-[100%]  h-[51px] text-[16px] lg:text-[16px] textSVNGilroy600 text-color rounded-full  ">
-                                  MUA NGAY
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    }
-                  )}
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
+        <div className=" w-[100%] px-[20px] lg:p-[0px] lg:w-[1200px]">
+          <Sliderlist/>
         </div>
       </div>
       <div className="mb-[53px] flex justify-center ">
         <div className=" w-[100%] lg:w-[1200px]">
           <div className="mb-[53px]">
-            <div className="text-[36px] mb-[26px] flex items-center">
+            <div className="text-[36px] mb-[26px] flex items-center px-[20px] lg:p-0">
               <div className=" flex-1 h-[1px] bg-[#A1AB62]"></div>
               <div className="text-[32px]  lg:text-[64px] text1FTVRestiany mx-[26px] text-[#A1AB62]">
                 Thực đơn
@@ -199,8 +149,8 @@ const ProductList = () => {
               <div className="flex-1 h-[1px] bg-[#A1AB62]"></div>
             </div>
 
-            <div className="grid grid-cols-12 gap-[30px]">
-              <div className=" w-[100%] lg:col-span-4">
+            <div className="grid grid-cols-12 gap-[30px]  ">
+              <div className=" w-[100%] lg:col-span-4 hidden lg:block">
                 <div className="w-[308px] ">
                   <div>
                     {fakeapiproductcatentrylist.map((category) => {
@@ -276,7 +226,7 @@ const ProductList = () => {
                       return (
                         <div
                           key={item.id}
-                          className="flex  justify-center items-center col-span-6 p-[16px]  lg:p-[32px] rounded-[15px] bg-[#F6F6F6]"
+                          className="flex  justify-center items-center col-span-6 p-[16px]  lg:p-[32px] rounded-[15px] bg-[#ededed]"
                         >
                           <div className="w-[100%]">
                             <div className="flex justify-center w-[100%] mb-[50px]">

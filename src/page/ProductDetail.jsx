@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import ProducDetail from "../img/productdetail.png";
 import cart from "../img/card.png";
-import Slideritem from "../component/Slider";
 import Monitor from "../component/Monitor";
-import Slider from "react-slick";
 import Sldier from "./Sldier";
 
 const ProductDetail = () => {
