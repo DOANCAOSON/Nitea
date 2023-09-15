@@ -151,7 +151,7 @@ const ProductList = () => {
                       return (
                         <div
                           key={item.id}
-                          className="flex w-[157px] h-[350px] lg:h-[auto] lg:w-[380px] p-[32px]  justify-center items-center  rounded-[15px]"
+                          className="flex w-[157px]  lg:h-[auto] lg:w-[380px] p-[32px]  justify-center items-center bg-[#F6F6F6]  rounded-[15px]"
                         >
                           <div className="w-[100%] ">
                             <div className="flex justify-center w-[100%] mb-[30px] lg:mb-[50px]">
@@ -163,7 +163,7 @@ const ProductList = () => {
                               </div>
                             </div>
                             <div className="mb-[36px] lg:mb-[40px] w-[100%]">
-                              <div className="h-[44px] lg:h-[auto] text-[16px] lg:text-[20px] textSVNGilroy600 mb-[8px] text-center w-[100%]">
+                              <div className="h-[60px] lg:h-[auto] text-[16px] lg:text-[20px] textSVNGilroy600 mb-[8px] text-center w-[100%]">
                                 {item.name}
                               </div>
                               <div className="text-[16px] lg:text-[24px] leading-[33px] text-center w-[100%]">
