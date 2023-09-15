@@ -171,7 +171,7 @@ const Header = () => {
                 </Link>
               ))}
               <div className="textSVNGilroy600 text-[16px] px-[28px] py-[12px] rounded-full  bg-backgroundBtn text-color cursor-pointer   ">
-                Đăng nhập
+              <Link to="/login">  Đăng nhập</Link>
               </div>
             </div>
 

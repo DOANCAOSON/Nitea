@@ -3,6 +3,8 @@ import ProducDetail from "../img/productdetail.png";
 import cart from "../img/card.png";
 import Slideritem from "../component/Slider";
 import Monitor from "../component/Monitor";
+import Slider from "react-slick";
+import Sldier from "./Sldier";
 
 const ProductDetail = () => {
   const [products, setProducts] = useState([
@@ -169,6 +171,9 @@ const ProductDetail = () => {
               Sản phẩm liên quan
             </h1>
           </div>
+        </div>
+        <div className="px-[20px] lg:p-0">
+          <Sldier/>
         </div>
         <Monitor />
       </div>

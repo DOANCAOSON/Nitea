@@ -11,32 +11,42 @@
   font-size: 36px !important;
   z-index: 100 !important;
 }
-
-.slick-prev {
-  left: -45px !important;
+.slick-list{
+  overflow: hidden;
+}
+.slick-track{
+  display: flex !important;
 }
 
-.slick-dots {
-  bottom: -70px !important;
+
+/* nut btn sldier */
+.slick-next:before{
+
+}
+.slick-prev{
+  left: -70px !important;
 }
 
-.slick-dots li button:before {
-  font-size: 16px !important;
+.slick-next{
+  right: -70px !important;
 }
-.slick-dots li button:before {
-  width: 40px !important;
-  height: 40px !important;
-}
-
-.slick-dots li.slick-active button:before {
-  opacity: 0.75;
-  color: #5dacdc !important;
-  width: 40px !important;
-  height: 40px !important;
+.slick-prev:before {
+  color: #000;
 }
 
-.slick-arrow {
-  display: none !important;
+.slick-slider svg{
+  color: #000 !important;
+  width: 80px !important;
+  height: 80px !important;
+  z-index: 1000;
+  position: absolute;
+}
+
+
+.slick-prev:before, .slick-next:before {
+  color: #000 !important;
+  font-size: 36px !important;
+  z-index: 100 !important;
 }
 
 /* ni */
@@ -54,4 +64,25 @@ button {
   height: 100%;
   width: 1px;
   background-color: #b26135;
+}
+
+
+@media screen and (max-width: 375px) {
+  /* Tùy chỉnh thiết kế cho màn hình có kích thước nhỏ hơn hoặc bằng 375px */
+  
+  /* Ví dụ: làm cho văn bản nhỏ hơn trên các thiết bị nhỏ hơn */
+  .slick-slider svg{
+    color: #000 !important;
+    width: 32px !important;
+    height: 32px !important;
+    z-index: 1000;
+    position: absolute;
+  }
+  .slick-prev{
+    left: 0 !important;
+  }
+  
+  .slick-next{
+    right: 0 !important;
+  }
 }
