@@ -8,6 +8,7 @@ import cart3 from "../img/card3.png";
 import Monitor from "../component/Monitor";
 import Sldier from "./Sldier";
 import Sliderlist from "../component/Sliderlist";
+import MenuMobile from "../component/MenuMobile";
 
 // Tạo danh sách sản phẩm giả
 const fakeapiproductcatentrylist = [
@@ -17,24 +18,85 @@ const fakeapiproductcatentrylist = [
 ];
 
 const fakeapiproductlist = [
-  { id: 1, category: "Đồ uống", name: "Cà phê", categoryId: 1 },
-  { id: 2, category: "Đồ uống", name: "Trà sữa", categoryId: 1 },
-  { id: 3, category: "Đồ uống", name: "Trà trái cây", categoryId: 1 },
-  { id: 4, category: "Đồ uống", name: "Macchiato", categoryId: 1 },
-  { id: 5, category: "Đồ uống", name: "Đá xay", categoryId: 1 },
-  { id: 6, category: "Đồ uống", name: "Sữa chua", categoryId: 1 },
-  { id: 7, category: "Đồ uống", name: "Nước trái cây", categoryId: 1 },
-  { id: 8, category: "Đồ uống", name: "Topping", categoryId: 1 },
-  { id: 9, category: "Bánh", name: "Bánh mì", categoryId: 2 },
-  { id: 10, category: "Bánh", name: "Bánh bao", categoryId: 2 },
-  { id: 11, category: "Bánh", name: "Bánh gạo", categoryId: 2 },
-  { id: 12, category: "Kẹo", name: "Kẹo dâu", categoryId: 3 },
-  { id: 13, category: "Kẹo", name: "Kẹo não", categoryId: 3 },
+  {
+    id: 1,
+    category: "Đồ uống",
+    name: "Cà phê",
+    categoryId: 1,
+  },
+  {
+    id: 2,
+    category: "Đồ uống",
+    name: "Trà sữa",
+    categoryId: 1,
+  },
+  {
+    id: 3,
+    category: "Đồ uống",
+    name: "Trà trái cây",
+    categoryId: 1,
+  },
+  {
+    id: 4,
+    category: "Đồ uống",
+    name: "Macchiato",
+    categoryId: 1,
+  },
+  {
+    id: 5,
+    category: "Đồ uống",
+    name: "Đá xay",
+    categoryId: 1,
+  },
+  {
+    id: 6,
+    category: "Đồ uống",
+    name: "Sữa chua",
+    categoryId: 1,
+  },
+  {
+    id: 7,
+    category: "Đồ uống",
+    name: "Nước trái cây",
+    categoryId: 1,
+  },
+  {
+    id: 8,
+    category: "Đồ uống",
+    name: "Topping",
+    categoryId: 1,
+  },
+  {
+    id: 9,
+    category: "Bánh",
+    name: "Bánh mì",
+    categoryId: 2,
+  },
+  {
+    id: 10,
+    category: "Bánh",
+    name: "Bánh bao",
+    categoryId: 2,
+  },
+  {
+    id: 11,
+    category: "Bánh",
+    name: "Bánh gạo",
+    categoryId: 2,
+  },
+  {
+    id: 12,
+    category: "Kẹo",
+    name: "Kẹo dâu",
+    categoryId: 3,
+  },
+  {
+    id: 13,
+    category: "Kẹo",
+    name: "Kẹo não",
+    categoryId: 3,
+  },
 ];
-
-
-
-
 
 const fakeapiproductlistitem = [
   {
@@ -75,21 +137,13 @@ const ProductList = () => {
     setActiveIndex(index);
   };
 
-
   const [category, setCategory] = useState("Đồ uống");
 
   const handleClickCategory = (category, id) => {
-    console.log(category);
-    console.log(id);
-    setCategory(category)
+    setCategory(category);
   };
 
-
-
   // const doUongProducts = fakeapiproductlist.filter(product => product.category === category);
-
-
-
 
   // const [white, setWither] = useState(0);
   // const slder_wrapper = useRef(null);
@@ -128,14 +182,14 @@ const ProductList = () => {
             </div>
             <div className="hidden sm:block lg:block">
               <span>
-                Thức uống mới toanh của Trạm Nitea, bạn đã thử
-                chưa?
+                Thức uống mới toanh của Trạm Nitea, bạn đã
+                thử chưa?
               </span>
             </div>
           </div>
         </div>
         <div className=" w-[100%] px-[20px] lg:p-[0px] lg:w-[1200px]">
-          <Sliderlist/>
+          <Sliderlist />
         </div>
       </div>
       <div className="mb-[53px] flex justify-center ">
@@ -150,67 +204,97 @@ const ProductList = () => {
             </div>
 
             <div className="grid grid-cols-12 gap-[30px]  ">
+              <div className="col-span-12 flex justify-center">
+                <MenuMobile />
+              </div>
               <div className=" w-[100%] lg:col-span-4 hidden lg:block">
                 <div className="w-[308px] ">
                   <div>
-                    {fakeapiproductcatentrylist.map((category) => {
-                      return (
-                        <div id='accordion-open' data-accordion='open' key={category.id}>
-                          <h2
-                            key={category.id}
-                            id={`accordion-open-heading-${category.id}`}
-                          >
-                            <div
-                              className='flex items-center justify-between w-full pb-[12px] border-b-[1px] border-[#505050] mb-[33px]  '
-                              data-accordion-target={`#accordion-open-body-${category.id}`}
-                              aria-expanded={`${category.id === 1 ? true : false}  `}
-                              aria-controls={`accordion-open-body-${category.id}`}
-                            >
-                              <span className='flex items-center'>
-                                <div className="mr-[12px]">
-                                  <img src={category.icon} alt="" />
-                                </div>
-                                <div className="text-[24px] textSVNGilroy500 text-colorBlack">
-                                  {category.category}
-                                </div>
-                              </span>
-                              <svg
-                                data-accordion-icon
-                                className='w-3 h-3 rotate-180 shrink-0'
-                                aria-hidden='true'
-                                xmlns='http://www.w3.org/2000/svg'
-                                fill='none'
-                                viewBox='0 0 10 6'
-                              >
-                                <path
-                                  stroke='currentColor'
-                                  strokeLinecap='round'
-                                  strokeLinejoin='round'
-                                  strokeWidth={2}
-                                  d='M9 5 5 1 1 5'
-                                />
-                              </svg>
-                            </div>
-                          </h2>
+                    {fakeapiproductcatentrylist.map(
+                      (category) => {
+                        return (
                           <div
-                            id={`accordion-open-body-${category.id}`}
-                            className={`${category.id === 1 ? "" : "hidden"}`}
-                            aria-labelledby={`accordion-open-heading-${category.id}`}
+                            id="accordion-open"
+                            data-accordion="open"
+                            key={category.id}
                           >
-                            <div className=''>
-                              {fakeapiproductlist.map((product) => {
-                                if (product.categoryId === category.id)
-                                  return (
-                                    <p className='text-[20px] text-[#505050] textSVNGilroy400 mb-[16px]'>
-                                      {product.name}
-                                    </p>
-                                  );
-                              })}
+                            <h2
+                              key={category.id}
+                              id={`accordion-open-heading-${category.id}`}
+                            >
+                              <div
+                                className="flex items-center justify-between w-full pb-[12px] border-b-[1px] border-[#505050] mb-[33px]  "
+                                data-accordion-target={`#accordion-open-body-${category.id}`}
+                                aria-expanded={`${
+                                  category.id === 1
+                                    ? true
+                                    : false
+                                }  `}
+                                aria-controls={`accordion-open-body-${category.id}`}
+                              >
+                                <span className="flex items-center">
+                                  <div className="mr-[12px]">
+                                    <img
+                                      src={category.icon}
+                                      alt=""
+                                    />
+                                  </div>
+                                  <div className="text-[24px] textSVNGilroy500 text-colorBlack">
+                                    {category.category}
+                                  </div>
+                                </span>
+                                <svg
+                                  data-accordion-icon
+                                  className="w-3 h-3 rotate-180 shrink-0"
+                                  aria-hidden="true"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 10 6"
+                                >
+                                  <path
+                                    stroke="currentColor"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M9 5 5 1 1 5"
+                                  />
+                                </svg>
+                              </div>
+                            </h2>
+                            <div
+                              id={`accordion-open-body-${category.id}`}
+                              className={`${
+                                category.id === 1
+                                  ? ""
+                                  : "hidden"
+                              }`}
+                              aria-labelledby={`accordion-open-heading-${category.id}`}
+                            >
+                              <div className="">
+                                {fakeapiproductlist.map(
+                                  (product) => {
+                                    if (
+                                      product.categoryId ===
+                                      category.id
+                                    )
+                                      return (
+                                        <p
+                                          key={
+                                            product.categoryId
+                                          }
+                                          className="text-[20px] text-[#505050] textSVNGilroy400 mb-[16px]"
+                                        >
+                                          {product.name}
+                                        </p>
+                                      );
+                                  }
+                                )}
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      );
-                    })}
+                        );
+                      }
+                    )}
                   </div>
                 </div>
               </div>
@@ -221,42 +305,40 @@ const ProductList = () => {
                   </div>
                 </div>
                 <div className="grid w-[100%] grid-cols-12 md:grid-cols-12  lg:grid-cols-12 gap-[20px]  lg:gap-[32px] px-[20px] lg:p-0">
-                  {fakeapiproductlistitem.map(
-                    (item) => {
-                      return (
-                        <div
-                          key={item.id}
-                          className="flex  justify-center items-center col-span-6 p-[16px]  lg:p-[32px] rounded-[15px] bg-[#ededed]"
-                        >
+                  {fakeapiproductlistitem.map((item) => {
+                    return (
+                      <div
+                        key={item.id}
+                        className="flex  justify-center items-center col-span-6 p-[16px]  lg:p-[32px] rounded-[15px] bg-[#ededed]"
+                      >
+                        <div className="w-[100%]">
+                          <div className="flex justify-center w-[100%] mb-[50px]">
+                            <div className="w-[59px] h-[141px] lg:w-[123px] lg:h-[279px] ">
+                              <img
+                                src={item.image}
+                                alt={item.image}
+                              />
+                            </div>
+                          </div>
+                          <div className="mb-[40px] w-[100%]">
+                            <div className="h-[44px] lg:h-[auto] text-[16px] lg:text-[20px] textSVNGilroy600 mb-[8px] text-center w-[100%]">
+                              {item.name}
+                            </div>
+                            <div className="text-[16px] lg:text-[24px] leading-[33px] text-center w-[100%]">
+                              {item.price}đ
+                            </div>
+                          </div>
                           <div className="w-[100%]">
-                            <div className="flex justify-center w-[100%] mb-[50px]">
-                              <div className="w-[59px] h-[141px] lg:w-[123px] lg:h-[279px] ">
-                                <img
-                                  src={item.image}
-                                  alt={item.image}
-                                />
-                              </div>
-                            </div>
-                            <div className="mb-[40px] w-[100%]">
-                              <div className="h-[44px] lg:h-[auto] text-[16px] lg:text-[20px] textSVNGilroy600 mb-[8px] text-center w-[100%]">
-                                {item.name}
-                              </div>
-                              <div className="text-[16px] lg:text-[24px] leading-[33px] text-center w-[100%]">
-                                {item.price}đ
-                              </div>
-                            </div>
                             <div className="w-[100%]">
-                              <div className="w-[100%]">
-                                <button className="bg-[#A1AB62] w-[100%]  h-[51px] text-[16px] lg:text-[16px] textSVNGilroy600 text-color rounded-full  ">
-                                  MUA NGAY
-                                </button>
-                              </div>
+                              <button className="bg-[#A1AB62] w-[100%]  h-[51px] text-[16px] lg:text-[16px] textSVNGilroy600 text-color rounded-full  ">
+                                MUA NGAY
+                              </button>
                             </div>
                           </div>
                         </div>
-                      );
-                    }
-                  )}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
