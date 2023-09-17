@@ -11,6 +11,9 @@
   font-size: 36px !important;
   z-index: 100 !important;
 }
+.slick-slide {
+  transition: transform 1s linear !important; /* Thời gian và hiệu ứng trượt */
+}
 .slick-list {
   overflow: hidden;
 }
@@ -45,6 +48,13 @@
   color: #000 !important;
   font-size: 36px !important;
   z-index: 100 !important;
+}
+/* mobiledow */
+.mobiledow .slick-prev {
+  display: none !important;
+}
+.mobiledow .slick-next  {
+  display: none !important;
 }
 
 /* ni */

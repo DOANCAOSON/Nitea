@@ -14,7 +14,7 @@ import MenuMobile from "../component/MenuMobile";
 const fakeapiproductcatentrylist = [
   { id: 1, category: "Đồ uống", icon: ly },
   { id: 2, category: "Bánh", icon: banh },
-  { id: 3, category: "kẹo", icon: bankem },
+  { id: 3, category: "S.phẩm bán kèm", icon: bankem },
 ];
 
 const fakeapiproductlist = [
@@ -172,24 +172,26 @@ const ProductList = () => {
   // });
 
   return (
-    <div className="pt-[102px] lg:w-[1200px] mx-[auto] overflow-hidden">
-      <div className="flex w-[100%] flex-wrap lg:flex-nowrap gap-[20px]  m-[auto] mb-[100px] ">
-        <div className="">
-          <div className=" w-[100%] px-[20px] lg:w-[278px] mt-[32px]">
-            <div className="text-[28px] lg:text-[40px] w-[100%] mb-[18px] text1FTVRestiany lg:px-[0px]">
-              Sản phẩm <br className="hidden  " />
-              <span className="text-[#A0AA62]">MỚI</span>
-            </div>
-            <div className="hidden sm:block lg:block">
-              <span>
-                Thức uống mới toanh của Trạm Nitea, bạn đã
-                thử chưa?
-              </span>
+    <div className="pt-[102px] lg:w-[1200px] mx-[auto]">
+      <div className="relative h-[557px] lg:w-[1300px]  overflow-hidden  mb-[100px] ">
+        <div className=" flex w-[100%] flex-wrap lg:flex-nowrap gap-[20px]  m-[auto] mb-[100px] absolute left-0">
+          <div className="">
+            <div className=" w-[100%] px-[20px] lg:w-[278px] mt-[32px]">
+              <div className="text-[28px] lg:text-[40px] w-[100%] mb-[18px] text1FTVRestiany lg:px-[0px]">
+                Sản phẩm <br className="hidden  " />
+                <span className="text-[#A0AA62]">MỚI</span>
+              </div>
+              <div className="hidden sm:block lg:block">
+                <span>
+                  Thức uống mới toanh của Trạm Nitea, bạn đã
+                  thử chưa?
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-        <div className=" w-[100%] px-[20px] lg:p-[0px] lg:w-[1200px]">
-          <Sliderlist />
+          <div className="w-[100%] px-[20px] lg:p-[0px] lg:w-[1200px]">
+            <Sliderlist />
+          </div>
         </div>
       </div>
       <div className="mb-[53px] flex justify-center ">
@@ -225,11 +227,10 @@ const ProductList = () => {
                               <div
                                 className="flex items-center justify-between w-full pb-[12px] border-b-[1px] border-[#505050] mb-[33px]  "
                                 data-accordion-target={`#accordion-open-body-${category.id}`}
-                                aria-expanded={`${
-                                  category.id === 1
+                                aria-expanded={`${category.id === 1
                                     ? true
                                     : false
-                                }  `}
+                                  }  `}
                                 aria-controls={`accordion-open-body-${category.id}`}
                               >
                                 <span className="flex items-center">
@@ -263,11 +264,10 @@ const ProductList = () => {
                             </h2>
                             <div
                               id={`accordion-open-body-${category.id}`}
-                              className={`${
-                                category.id === 1
+                              className={`${category.id === 1
                                   ? ""
                                   : "hidden"
-                              }`}
+                                }`}
                               aria-labelledby={`accordion-open-heading-${category.id}`}
                             >
                               <div className="">

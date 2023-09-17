@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const fakeapiproductcatentrylist = [
   { id: 1, category: "Đồ uống" },
   { id: 2, category: "Bánh" },
@@ -85,26 +87,33 @@ const fakeapiproductlist = [
   },
 ];
 
+
+
+
 const MenuMobile = () => {
-  const hanndelClickValue = (category) => {
-    console.log(category);
+  const [category, setCategory] = useState("Đồ uống");
+
+  const handleChange = (event) => {
+    const selectedCategory = event.target.value;
+    setCategory(selectedCategory);
   };
 
+  const doUongProducts = fakeapiproductlist.filter(product => product.category === category);
+
+
   return (
-    <div className="flex items-center">
+    <div className="flex items-center  lg:hidden">
       <select
         style={{ borderBottom: "1px solid #505050" }}
-        className="border-0"
+        className="border-0 w-[150px] bg-[#f6f6f6] text-left text-[16px] textSVNGilroy500"
         id="pet-name"
+        onChange={handleChange}
       >
         {fakeapiproductcatentrylist.map((category) => {
           return (
             <option
               key={category.id}
               value={category.category}
-              onChange={() => {
-                hanndelClickValue(category.category);
-              }}
             >
               {category.category}
             </option>
@@ -114,12 +123,12 @@ const MenuMobile = () => {
       <div className="w-[1px] h-[100%] bg-[#505050] mx-[16px]"></div>
       <select
         style={{ borderBottom: "1px solid #505050" }}
-        className="block  border-0 relative"
+        className="block  border-0 relative w-[170px] bg-[#f6f6f6] text-left text-[16px] textSVNGilroy500"
         id="pet-item"
       >
-        {fakeapiproductlist.map((item) => {
+        {doUongProducts.map((item) => {
           return (
-            <option key={item.id} value={item.name}>
+            <option  key={item.id} value={item.name}>
               {item.name}
             </option>
           );

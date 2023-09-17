@@ -59,11 +59,13 @@ const Sliderlist = () => {
                 },
             },
         ],
-        prevArrow: <FiChevronLeft className="sliderleft"/>,
-        nextArrow: <FiChevronRight/>
+        // prevArrow: <FiChevronLeft className="sliderleft"/>,
+        // nextArrow: <FiChevronRight/>,
+        // prevArrow: null, // Tắt mũi tên trước
+        // nextArrow: null,
     };
     return (
-        <div className="">
+        <div className="mobiledow">
             <Slider {...settings}>
                 {fakeapiproductlistitem.map((item) => {
                     return (
