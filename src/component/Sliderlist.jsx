@@ -45,7 +45,9 @@ const Sliderlist = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 5000,
     slidesToScroll: 1,
     slidesToShow: 3, // Hiển thị 3 mục trên mọi màn hình mặc định
     responsive: [

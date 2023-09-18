@@ -12,7 +12,7 @@
   z-index: 100 !important;
 }
 .slick-slide {
-  transition: transform 1s linear !important; /* Thời gian và hiệu ứng trượt */
+  transition: transform 1s ease-in-out !important; /* Thời gian và hiệu ứng trượt */
 }
 .slick-list {
   overflow: hidden;
@@ -60,6 +60,10 @@
 button {
   border: none;
   outline: none;
+}
+
+.outlineinput{
+  outline: none !important;
 }
 
 .lineafter::after {

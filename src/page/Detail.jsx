@@ -6,7 +6,7 @@ import Monitor from "../component/Monitor";
 
 const Detail = () => {
   return (
-    <div className="w-[100%] lg:w-[1200px] flex justify-center mt-[56px] sm:mt-[102px] lg:mt-[102px] mx-[auto] ">
+    <div className="w-[100%] lg:w-[1200px] flex justify-center mt-[118px] sm:mt-[195px] lg:mt-[195px] mx-[auto] ">
       <div className="w-[100%]">
         <div className="mb-[64px]">
           <div className="text-[40px] leading-[56px] text-colorBlack font-semibold mb-[32px] px-[20px] lg:p-[0px]"></div>

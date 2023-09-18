@@ -166,7 +166,7 @@ const ProductList = () => {
   // });
 
   return (
-    <div className="pt-[102px] lg:w-[1200px] mx-[auto]">
+    <div className="mt-[118px]  sm:mt-[195px] lg:mt-[195px] lg:w-[1200px] mx-[auto]">
       <div className="relative  h-[557px] lg:w-[1300px]  overflow-hidden  lg:mb-[100px] ">
         <div className=" flex w-[100%] flex-wrap lg:flex-nowrap gap-[20px]  m-[auto] mb-[100px] absolute left-0">
           <div className="">

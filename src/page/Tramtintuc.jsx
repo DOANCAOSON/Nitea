@@ -5,7 +5,7 @@ import Monitor from "../component/Monitor";
 
 const Tramtintuc = () => {
   return (
-    <div className="w-[100%] lg:w-[1200px] flex justify-center mt-[56px] sm:mt-[102px] lg:mt-[102px] mx-[auto] ">
+    <div className="w-[100%] lg:w-[1200px] flex justify-center mt-[118px] sm:mt-[195px] lg:mt-[195px] mx-[auto] ">
       <div className="w-[100%]">
         <div className="flex w-[100%] items-center gap-x-[12px] mb-[32px]  sm:mb-[64px] lg:mb-[64px]">
           <div className="text1FTVRestiany text-[28px] sm:text-[40px] lg:text-[40px]  w-[218px] sm:w-[auto] lg:w-[auto]  leading-[56px] text-mainstream   px-[20px] sm:px-[0px] lg:px-[0px]  sm:whitespace-nowrap lg:whitespace-nowrap">

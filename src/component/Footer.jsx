@@ -62,9 +62,9 @@ const Footer = () => {
                 </div>
                 <div className="w-[100%] lg:w-[80%]">
                   <div className="flex justify-between bg-headerbackgbtnFooter h-[56px] items-center w-[100%] sm:w-[75%] lg:w-[100%] ">
-                    <div className="h-[100%] text-[#21212180]">
+                    <div className="h-[100%]  w-[100%] text-[#21212180]">
                       <input
-                        className="h-[100%] w-[100%] px-[16px]  lg:px-[16px] bg-color "
+                        className="h-[100%] w-[100%] px-[16px]  border-none  outlineinput lg:px-[16px] bg-color "
                         type="text"
                         placeholder="Nhập email của bạn"
                       />

@@ -91,7 +91,7 @@ const ProductDetail = () => {
   }, [products]);
 
   return (
-    <div className="w-[100%] mt-[104px]">
+    <div className="w-[100%] mt-[118px]  sm:mt-[195px] lg:mt-[195px]">
       <div className="w-[100%] sm:w-[100%] lg:w-[1200px] mx-[auto]">
         <div className="payment-address-form  px-[20px]">
           <div className="flex items-center h-[20px]  gap-x-[8px] mb-[84px] lg:mb-[8px] ">

@@ -1,6 +1,6 @@
 const Login = () => {
   return (
-    <div className="w-[100%] lg:w-[1095px] flex justify-center mt-[56px] sm:mt-[102px] lg:mt-[102px] mx-[auto] ">
+    <div className="w-[100%] lg:w-[1095px] flex justify-center mt-[118px] sm:mt-[195px] lg:mt-[195px] mx-[auto] ">
       <div className="w-[100%]">
         <div className="mb-[80px]">
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-12 px-[20px] py-[32px]   lg:p-[40px]  rounded-lg bg-color  ">
