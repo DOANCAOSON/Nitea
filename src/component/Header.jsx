@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import logorps from "../img/logorps.png";
+import HeaderMobile from "./headerMobile";
 
 const Header = () => {
   const apifake = [
@@ -24,7 +25,6 @@ const Header = () => {
 
   const [categories, setCategories] = useState(apifake);
 
-  console.log(categories);
   return (
     <div className=" w-[100%] h-[auto]">
       <div className="w-[100%] bg-colorBlack sm:bg-headerbackgrou lg:bg-headerbackgrou py-4 px-[20px] sm:px-[0px] lg:px-[0px]">
@@ -171,7 +171,7 @@ const Header = () => {
                 </Link>
               ))}
               <div className="textSVNGilroy600 text-[16px] px-[28px] py-[12px] rounded-full  bg-backgroundBtn text-color cursor-pointer   ">
-              <Link to="/login">  Đăng nhập</Link>
+                <Link to="/login"> Đăng nhập</Link>
               </div>
             </div>
 

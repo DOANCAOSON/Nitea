@@ -102,7 +102,7 @@ const MenuMobile = () => {
     <div className="flex items-center  lg:hidden">
       <select
         style={{ borderBottom: "1px solid #505050" }}
-        className="border-0 w-[150px] bg-[#f6f6f6] text-left text-[16px] textSVNGilroy500"
+        className="border-0 bg-[#f6f6f6] text-left text-[16px] textSVNGilroy500"
         id="pet-name"
         onChange={handleChange}
       >

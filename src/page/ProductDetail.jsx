@@ -3,6 +3,7 @@ import ProducDetail from "../img/productdetail.png";
 import cart from "../img/card.png";
 import Monitor from "../component/Monitor";
 import Sldier from "./Sldier";
+import { FiChevronRight } from "react-icons/fi";
 
 const ProductDetail = () => {
   const [products, setProducts] = useState([
@@ -14,6 +15,46 @@ const ProductDetail = () => {
       quantity: 1,
     },
   ]);
+
+  // btn line flow
+  const categoriesItem = [
+    {
+      id: 1,
+      category: "Mô Tả",
+    },
+    {
+      id: 2,
+      category: "Nguyên liệu",
+    },
+  ];
+
+  const [lineIndex, setLineIndex] = useState(1);
+  const [lineCategoryItem, setLineCategoryItem] =
+    useState("Mô Tả");
+
+  const handLineClick = (id, category) => {
+    setLineIndex(id);
+    setLineCategoryItem(category);
+  };
+
+  const categoriesItemdesc = [
+    {
+      id: 1,
+      category: "Mô Tả",
+      description:
+        "Được chiết xuất từ những lá trà olong thơm ngon hòa quyện cùng những hương vị chua ngọt từ trái cây được nhà Nitea tuyển chọn, trà trái cây nhiệt đới chắc chắn sẽ là thức uống giải khát cho những ngày nóng bức của bạn thêm tươi mát",
+    },
+    {
+      id: 2,
+      category: "Nguyên liệu",
+      description:
+        "Trà oolong tứ quý: Là loại trà oolong cao cấp được chế biến tinh tế từ lá trà có chất lượng tốt. Trà oolong tứ quý thường có hương thơm phức hợp và vị đậm đà.",
+    },
+  ];
+
+  const nguyenlieuProducts = categoriesItemdesc.filter(
+    (product) => product.category === lineCategoryItem
+  );
 
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -48,23 +89,29 @@ const ProductDetail = () => {
     );
     setTotalPrice(newTotalPrice);
   }, [products]);
+
   return (
     <div className="w-[100%] mt-[104px]">
       <div className="w-[100%] sm:w-[100%] lg:w-[1200px] mx-[auto]">
         <div className="payment-address-form  px-[20px]">
-          <div className="flex items-center h-[20px]  gap-x-[8px] mb-[8px]">
+          <div className="flex items-center h-[20px]  gap-x-[8px] mb-[84px] lg:mb-[8px] ">
             <div className="text-[#909090] textSVNGilroy400 mb-[2px] text-[16px]">
               Nitea
             </div>
-            <div className="textSVNGilroy400">></div>
+            <div className="textSVNGilroy400">
+              <FiChevronRight />
+            </div>
             <div className="text-[#909090]  textSVNGilroy400  text-[16px] ">
               Sản phẩm
             </div>
-            <div className="textSVNGilroy400">></div>
+            <div className="textSVNGilroy400">
+              <FiChevronRight />
+            </div>
             <div className="text-[#000] textSVNGilroy400  text-[16px] ">
               Trà trái cây nhiệt đới
             </div>
           </div>
+
           <div className="mb-[100px] w-[100%] flex justify-center">
             <div className="w-[183px] lg:w-[293px] lg:h-[390px]">
               <img src={ProducDetail} alt="" />
@@ -82,23 +129,40 @@ const ProductDetail = () => {
             </div>
             <div className="mb-[64px]">
               <div className="flex gap-x-[24px] mb-[16px] ">
-                <div className="textSVNGilroy400 text-[16px] lg:text-[20px]">
-                  Mô tả
-                </div>
-                <div className="textSVNGilroy400  text-[16px] lg:text-[20px]">
-                  Nguyên liệu
-                </div>
+                {categoriesItem.map((item) => {
+                  return (
+                    <div
+                      key={item.id}
+                      onClick={() => {
+                        handLineClick(
+                          item.id,
+                          item.category
+                        );
+                      }}
+                      className={`${
+                        lineIndex === item.id
+                          ? "lineborder"
+                          : ""
+                      } relative textSVNGilroy400 text-[16px] lg:text-[20px]`}
+                    >
+                      {item.category}
+                    </div>
+                  );
+                })}
               </div>
               <div>
-                <div>
-                  <p className=" text-[14px] lg:text-[16px] textSVNGilroy400 leading-[22.4px] ">
-                    Sự kết hợp tinh tế giữa hương trà oolong
-                    tứ quý tinh tế, đậm đà cùng vị sữa ngọt
-                    ngào. Ăn kèm với những viên trân châu
-                    mềm mại để làm tăng thêm phần độc đáo
-                    cho thức uống này.
-                  </p>
-                </div>
+                {nguyenlieuProducts.map((item, index) => {
+                  return (
+                    <div
+                      key={item.id}
+                      className="h-[120px] lg:h-[100px]"
+                    >
+                      <p className=" text-[14px] lg:text-[16px] textSVNGilroy400 leading-[22.4px] ">
+                        {item.description}
+                      </p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
             <div>
@@ -159,7 +223,6 @@ const ProductDetail = () => {
             </div>
           </div>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-12 mb-[32px]">
           <div className="col-span-12 text-center">
             <h1 className="text-[28px] sm:text-[40px] lg:text-[40px] text1FTVRestiany text-colorBlack">

@@ -16,11 +16,14 @@ import Test from "./page/Test";
 import Login from "./page/Login";
 import ProductDetail from "./page/ProductDetail";
 import ProductList from "./page/ProductList";
+import HeaderMobile from "./component/headerMobile";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
+      {/* <HeaderMobile /> */}
+
       <ScrollToTop />
       <Routes>
         <Route exact path="/" element={<Home />} />

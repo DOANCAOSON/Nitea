@@ -1,12 +1,10 @@
-import { motion } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 import ly from "../img/productlist.png";
 import banh from "../img/banh.png";
 import bankem from "../img/bankem.png";
 import cart2 from "../img/card2.png";
 import cart3 from "../img/card3.png";
 import Monitor from "../component/Monitor";
-import Sldier from "./Sldier";
 import Sliderlist from "../component/Sliderlist";
 import MenuMobile from "../component/MenuMobile";
 
@@ -132,15 +130,11 @@ const fakeapiproductlistitem = [
 ];
 
 const ProductList = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
+
   const handleItemClick = (index) => {
     setActiveIndex(index);
-  };
-
-  const [category, setCategory] = useState("Đồ uống");
-
-  const handleClickCategory = (category, id) => {
-    setCategory(category);
+    console.log(activeIndex);
   };
 
   // const doUongProducts = fakeapiproductlist.filter(product => product.category === category);
@@ -238,7 +232,7 @@ const ProductList = () => {
                                   <div className="mr-[12px]">
                                     <img
                                       src={category.icon}
-                                      alt=""
+                                      alt={category.icon}
                                     />
                                   </div>
                                   <div className="text-[24px] textSVNGilroy500 text-colorBlack">
@@ -284,7 +278,17 @@ const ProductList = () => {
                                           key={
                                             product.categoryId
                                           }
-                                          className="text-[20px] text-[#505050] textSVNGilroy400 mb-[16px]"
+                                          className={`${
+                                            activeIndex ===
+                                            product.id
+                                              ? "text-[#A1AB62]"
+                                              : ""
+                                          } text-[20px] text-[#505050] textSVNGilroy400 mb-[16px]`}
+                                          onClick={() => {
+                                            handleItemClick(
+                                              product.categoryId
+                                            );
+                                          }}
                                         >
                                           {product.name}
                                         </p>

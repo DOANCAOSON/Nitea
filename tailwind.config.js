@@ -18,7 +18,8 @@ export default {
         "textmainstream": "#B26135",
         "line": "#B26135",
         "linepayment": "rgba(80, 80, 80, 0.50)",
-        "loginline": "rgba(80, 80, 80, 0.30)"
+        "loginline": "rgba(80, 80, 80, 0.30)",
+        "bgmobileheader": "rgba(0, 0, 0, 1)"
       },
       boxShadow: {
         'boxshadowbottom': '0px 4px 8px rgba(0, 0, 0, 0.2)',
