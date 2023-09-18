@@ -86,10 +86,6 @@ const fakeapiproductlist = [
     categoryId: 3,
   },
 ];
-
-
-
-
 const MenuMobile = () => {
   const [category, setCategory] = useState("Đồ uống");
 
@@ -98,8 +94,9 @@ const MenuMobile = () => {
     setCategory(selectedCategory);
   };
 
-  const doUongProducts = fakeapiproductlist.filter(product => product.category === category);
-
+  const doUongProducts = fakeapiproductlist.filter(
+    (product) => product.category === category
+  );
 
   return (
     <div className="flex items-center  lg:hidden">
@@ -128,7 +125,7 @@ const MenuMobile = () => {
       >
         {doUongProducts.map((item) => {
           return (
-            <option  key={item.id} value={item.name}>
+            <option key={item.id} value={item.name}>
               {item.name}
             </option>
           );

@@ -2,7 +2,7 @@
   margin: 0 auto;
   color: #000;
   background-color: "#F6F6F6";
-  /* overflow: hidden !important; */
+  overflow: hidden !important;
 }
 
 .slick-prev:before,
@@ -34,7 +34,6 @@
 .slick-prev:before {
   color: #000;
 }
-
 .slick-slider svg {
   color: #000 !important;
   width: 80px !important;
@@ -53,7 +52,7 @@
 .mobiledow .slick-prev {
   display: none !important;
 }
-.mobiledow .slick-next  {
+.mobiledow .slick-next {
   display: none !important;
 }
 
@@ -76,7 +75,6 @@ button {
 
 /* selectomibile */
 
-
 @media screen and (max-width: 375px) {
   /* Tùy chỉnh thiết kế cho màn hình có kích thước nhỏ hơn hoặc bằng 375px */
 
@@ -88,11 +86,21 @@ button {
     z-index: 1000;
     position: absolute;
   }
+  .slick-list {
+    padding: 0px 20px !important;
+  }
   .slick-prev {
     left: 0 !important;
   }
 
   .slick-next {
+    right: 0 !important;
+  }
+
+  .mobiledow .slick-prev {
+  }
+  .mobiledow .slick-next {
+    display: block !important;
     right: 0 !important;
   }
 }

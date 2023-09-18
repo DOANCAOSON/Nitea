@@ -173,7 +173,7 @@ const ProductList = () => {
 
   return (
     <div className="pt-[102px] lg:w-[1200px] mx-[auto]">
-      <div className="relative h-[557px] lg:w-[1300px]  overflow-hidden  mb-[100px] ">
+      <div className="relative  h-[557px] lg:w-[1300px]  overflow-hidden  lg:mb-[100px] ">
         <div className=" flex w-[100%] flex-wrap lg:flex-nowrap gap-[20px]  m-[auto] mb-[100px] absolute left-0">
           <div className="">
             <div className=" w-[100%] px-[20px] lg:w-[278px] mt-[32px]">
@@ -189,7 +189,7 @@ const ProductList = () => {
               </div>
             </div>
           </div>
-          <div className="w-[100%] px-[20px] lg:p-[0px] lg:w-[1200px]">
+          <div className="w-[100%]  lg:p-[0px] lg:w-[1200px]">
             <Sliderlist />
           </div>
         </div>
@@ -227,10 +227,11 @@ const ProductList = () => {
                               <div
                                 className="flex items-center justify-between w-full pb-[12px] border-b-[1px] border-[#505050] mb-[33px]  "
                                 data-accordion-target={`#accordion-open-body-${category.id}`}
-                                aria-expanded={`${category.id === 1
+                                aria-expanded={`${
+                                  category.id === 1
                                     ? true
                                     : false
-                                  }  `}
+                                }  `}
                                 aria-controls={`accordion-open-body-${category.id}`}
                               >
                                 <span className="flex items-center">
@@ -264,10 +265,11 @@ const ProductList = () => {
                             </h2>
                             <div
                               id={`accordion-open-body-${category.id}`}
-                              className={`${category.id === 1
+                              className={`${
+                                category.id === 1
                                   ? ""
                                   : "hidden"
-                                }`}
+                              }`}
                               aria-labelledby={`accordion-open-heading-${category.id}`}
                             >
                               <div className="">
