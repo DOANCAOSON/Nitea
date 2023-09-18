@@ -189,7 +189,7 @@ const ProductList = () => {
               </div>
             </div>
           </div>
-          <div className="w-[100%]  lg:p-[0px] lg:w-[1200px]">
+          <div className="w-[100%] px-[20px]  lg:p-[0px] lg:w-[1200px]">
             <Sliderlist />
           </div>
         </div>

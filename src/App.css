@@ -86,9 +86,7 @@ button {
     z-index: 1000;
     position: absolute;
   }
-  .slick-list {
-    padding: 0px 20px !important;
-  }
+
   .slick-prev {
     left: 0 !important;
   }
@@ -97,10 +95,59 @@ button {
     right: 0 !important;
   }
 
-  .mobiledow .slick-prev {
-  }
   .mobiledow .slick-next {
     display: block !important;
-    right: 0 !important;
+    right: -20px !important;
+  }
+
+  .productdetailbtn .slick-prev {
+    left: -20px !important;
+    display: none !important ;
+  }
+  .productdetailbtn .slick-next {
+    right: -20px !important;
+  }
+}
+
+.payment-address-form {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+  grid-auto-rows: auto;
+}
+
+.payment-address-form div:nth-child(1) {
+  grid-column: 2;
+}
+
+.payment-address-form img:nth-child(2) {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+}
+
+.payment-address-form div:nth-child(3) {
+  grid-column: 2;
+}
+
+.payment-address-form div:nth-child(4) {
+  grid-column: 2;
+}
+
+@media (max-width: 768px) {
+  .payment-address-form {
+    grid-template-columns: 1fr;
+  }
+  .payment-address-form div:nth-child(1) {
+    grid-column: 1;
+  }
+  .payment-address-form img:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .payment-address-form div:nth-child(3) {
+    grid-column: 1;
+  }
+  .payment-address-form div:nth-child(4) {
+    grid-column: 1;
   }
 }

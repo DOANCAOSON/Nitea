@@ -63,7 +63,7 @@ const Sldier = () => {
         nextArrow: <FiChevronRight/>
     };
     return (
-        <div className="">
+        <div className="productdetailbtn">
             <Slider {...settings}>
                 {fakeapiproductlistitem.map((item) => {
                     return (
