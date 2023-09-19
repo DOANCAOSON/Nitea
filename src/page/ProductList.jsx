@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ly from "../img/productlist.png";
 import banh from "../img/banh.png";
 import bankem from "../img/bankem.png";
@@ -21,72 +21,84 @@ const fakeapiproductlist = [
     category: "Đồ uống",
     name: "Cà phê",
     categoryId: 1,
+    categoryitem: 3,
   },
   {
     id: 2,
     category: "Đồ uống",
     name: "Trà sữa",
     categoryId: 1,
+    categoryitem: 2,
   },
   {
     id: 3,
     category: "Đồ uống",
     name: "Trà trái cây",
     categoryId: 1,
+    categoryitem: 1,
   },
   {
     id: 4,
     category: "Đồ uống",
     name: "Macchiato",
     categoryId: 1,
+    categoryitem: 4,
   },
   {
     id: 5,
     category: "Đồ uống",
     name: "Đá xay",
     categoryId: 1,
+    categoryitem: 5,
   },
   {
     id: 6,
     category: "Đồ uống",
     name: "Sữa chua",
     categoryId: 1,
+    categoryitem: 6,
   },
   {
     id: 7,
     category: "Đồ uống",
     name: "Nước trái cây",
     categoryId: 1,
+    categoryitem: 7,
   },
   {
     id: 8,
     category: "Đồ uống",
     name: "Topping",
     categoryId: 1,
+    categoryitem: 8,
   },
   {
     id: 9,
     category: "Bánh",
     name: "Bánh mì",
     categoryId: 2,
+    categoryitem: 9,
   },
   {
     id: 10,
     category: "Bánh",
     name: "Bánh bao",
     categoryId: 2,
+    categoryitem: 10,
   },
   {
     id: 12,
     category: "Kẹo",
     name: "Kẹo dâu",
     categoryId: 3,
+    categoryitem: 11,
   },
   {
     id: 13,
     category: "Kẹo",
     name: "Kẹo não",
     categoryId: 3,
+    categoryitem: 12,
   },
 ];
 
@@ -96,38 +108,51 @@ const fakeapiproductlistitem = [
     name: "TRÀ TRÁI CÂY NHIỆT ĐỚI",
     price: "39000",
     image: cart2,
+    categoryId: 1,
+    categoryitem: 3,
   },
   {
     id: 2,
     name: "TRÀ ĐÀO CAM SẢ",
     price: "39000",
     image: cart3,
+    categoryId: 1,
+    categoryitem: 4,
   },
   {
     id: 3,
     name: "TRÀ XOÀI MACHIATO",
     price: "42000",
     image: cart2,
+    categoryId: 1,
+    categoryitem: 2,
   },
   {
     id: 4,
     name: "TRÀ VẢI Ô-LONG",
     price: "42000",
     image: cart3,
+    categoryId: 1,
+    categoryitem: 1,
   },
   {
     id: 5,
     name: "TRÀ ỔI HỒNG",
     price: "39000",
     image: cart2,
+    categoryId: 2,
+    categoryitem: 1,
   },
 ];
 
 const ProductList = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [filter, setFilter] = useState();
 
-  const handleItemClick = (index) => {
+  const handleItemClick = (index, categoryitem) => {
     setActiveIndex(index);
+    setFilter(categoryitem);
+    console.log(categoryitem);
   };
 
   return (
@@ -248,7 +273,8 @@ const ProductList = () => {
                                           } text-[20px] text-[#505050] textSVNGilroy400 mb-[16px]`}
                                           onClick={() =>
                                             handleItemClick(
-                                              index
+                                              index,
+                                              product.categoryitem
                                             )
                                           }
                                         >
@@ -274,38 +300,39 @@ const ProductList = () => {
                 </div>
                 <div className="grid w-[100%] grid-cols-12 md:grid-cols-12  lg:grid-cols-12 gap-[20px]  lg:gap-[32px] px-[20px] lg:p-0">
                   {fakeapiproductlistitem.map((item) => {
-                    return (
-                      <div
-                        key={item.id}
-                        className="flex  justify-center items-center col-span-6 p-[16px]  lg:p-[32px] rounded-[15px] bg-[#ededed]"
-                      >
-                        <div className="w-[100%]">
-                          <div className="flex justify-center w-[100%] mb-[50px]">
-                            <div className="w-[59px] h-[141px] lg:w-[123px] lg:h-[279px] ">
-                              <img
-                                src={item.image}
-                                alt={item.image}
-                              />
-                            </div>
-                          </div>
-                          <div className="mb-[40px] w-[100%]">
-                            <div className="h-[44px] lg:h-[auto] text-[16px] lg:text-[20px] textSVNGilroy600 mb-[8px] text-center w-[100%]">
-                              {item.name}
-                            </div>
-                            <div className="text-[16px] lg:text-[24px] leading-[33px] text-center w-[100%]">
-                              {item.price}đ
-                            </div>
-                          </div>
+                    if (item.categoryitem === filter)
+                      return (
+                        <div
+                          key={item.id}
+                          className="flex  justify-center items-center col-span-6 p-[16px]  lg:p-[32px] rounded-[15px] bg-[#ededed]"
+                        >
                           <div className="w-[100%]">
+                            <div className="flex justify-center w-[100%] mb-[50px]">
+                              <div className="w-[59px] h-[141px] lg:w-[123px] lg:h-[279px] ">
+                                <img
+                                  src={item.image}
+                                  alt={item.image}
+                                />
+                              </div>
+                            </div>
+                            <div className="mb-[40px] w-[100%]">
+                              <div className="h-[44px] lg:h-[auto] text-[16px] lg:text-[20px] textSVNGilroy600 mb-[8px] text-center w-[100%]">
+                                {item.name}
+                              </div>
+                              <div className="text-[16px] lg:text-[24px] leading-[33px] text-center w-[100%]">
+                                {item.price}đ
+                              </div>
+                            </div>
                             <div className="w-[100%]">
-                              <button className="bg-[#A1AB62] w-[100%]  h-[51px] text-[16px] lg:text-[16px] textSVNGilroy600 text-color rounded-full  ">
-                                MUA NGAY
-                              </button>
+                              <div className="w-[100%]">
+                                <button className="bg-[#A1AB62] w-[100%]  h-[51px] text-[16px] lg:text-[16px] textSVNGilroy600 text-color rounded-full  ">
+                                  MUA NGAY
+                                </button>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    );
+                      );
                   })}
                 </div>
               </div>
