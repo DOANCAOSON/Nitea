@@ -24,6 +24,11 @@
 /* nut btn sldier */
 .slick-next:before {
 }
+.slick-track {
+  display: flex !important;
+  gap: 30px !important;
+}
+
 .slick-prev {
   left: -70px !important;
 }
@@ -33,6 +38,9 @@
 }
 .slick-prev:before {
   color: #000;
+}
+.slick-slide {
+  gap: 10px !important;
 }
 .slick-slider svg {
   color: #000 !important;
@@ -62,7 +70,7 @@ button {
   outline: none;
 }
 
-.outlineinput{
+.outlineinput {
   outline: none !important;
 }
 
@@ -81,6 +89,10 @@ button {
 
 @media screen and (max-width: 375px) {
   /* Tùy chỉnh thiết kế cho màn hình có kích thước nhỏ hơn hoặc bằng 375px */
+
+  .slick-track {
+    gap: 0px !important;
+  }
 
   /* Ví dụ: làm cho văn bản nhỏ hơn trên các thiết bị nhỏ hơn */
   .slick-slider svg {

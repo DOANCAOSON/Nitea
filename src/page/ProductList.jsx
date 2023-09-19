@@ -148,16 +148,16 @@ const fakeapiproductlistitem = [
 const ProductList = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [filter, setFilter] = useState();
+  const [filter1, setFilter1] = useState();
 
   const handleItemClick = (index, categoryitem) => {
     setActiveIndex(index);
     setFilter(categoryitem);
-    console.log(categoryitem);
   };
 
   return (
     <div className="mt-[118px]  sm:mt-[195px] lg:mt-[195px] lg:w-[1200px] mx-[auto]">
-      <div className="relative  h-[557px] lg:w-[1300px]  overflow-hidden  lg:mb-[100px] ">
+      <div className="relative  h-[557px] lg:w-[100vw]  overflow-hidden  lg:mb-[100px] ">
         <div className=" flex w-[100%] flex-wrap lg:flex-nowrap gap-[20px]  m-[auto] mb-[100px] absolute left-0">
           <div className="">
             <div className=" w-[100%] px-[20px] lg:w-[278px] mt-[32px]">
@@ -173,7 +173,7 @@ const ProductList = () => {
               </div>
             </div>
           </div>
-          <div className="w-[100%] px-[20px]  lg:p-[0px] lg:w-[1200px]">
+          <div className="w-[100%] px-[20px]  lg:p-[0px]  lg:w-[80%]">
             <Sliderlist />
           </div>
         </div>
@@ -274,7 +274,9 @@ const ProductList = () => {
                                           onClick={() =>
                                             handleItemClick(
                                               index,
-                                              product.categoryitem
+                                              product.categoryitem,
+                                              product
+
                                             )
                                           }
                                         >

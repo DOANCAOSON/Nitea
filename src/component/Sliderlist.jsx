@@ -75,7 +75,7 @@ const Sliderlist = () => {
         {fakeapiproductlistitem.map((item) => {
           return (
             <div key={item.id}>
-              <div className="rounded-[25px] bg-[#ededed] w-[157px] overflow-hidden  lg:w-[380px] lg:h-[557px] py-[16px] lg:p-[32px] ">
+              <div className="rounded-[25px] bg-[#ededed] w-[157px] overflow-hidden  lg:w-[100%] lg:h-[557px] py-[16px] lg:p-[32px] ">
                 <div className="flex justify-center w-[100%] mb-[30px] lg:mb-[50px]">
                   <div className="w-[59px] h-[141px] lg:w-[123px] lg:h-[279px] ">
                     <img
