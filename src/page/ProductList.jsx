@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ly from "../img/productlist.png";
 import banh from "../img/banh.png";
 import bankem from "../img/bankem.png";
@@ -77,12 +77,6 @@ const fakeapiproductlist = [
     categoryId: 2,
   },
   {
-    id: 11,
-    category: "Bánh",
-    name: "Bánh gạo",
-    categoryId: 2,
-  },
-  {
     id: 12,
     category: "Kẹo",
     name: "Kẹo dâu",
@@ -130,40 +124,11 @@ const fakeapiproductlistitem = [
 ];
 
 const ProductList = () => {
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const handleItemClick = (index) => {
     setActiveIndex(index);
-    console.log(activeIndex);
   };
-
-  // const doUongProducts = fakeapiproductlist.filter(product => product.category === category);
-
-  // const [white, setWither] = useState(0);
-  // const slder_wrapper = useRef(null);
-
-  // const moveSlider = (direction) => {
-  //   const slider = slder_wrapper.current;
-  //   if (slider) {
-  //     const currentX = slider.scrollLeft;
-  //     const cardWidth = slider.offsetWidth;
-  //     const offset =
-  //       direction === "left" ? -cardWidth : cardWidth;
-  //     slider.scrollTo({
-  //       left: currentX + offset,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // };
-
-  // // Tạo một mảng mới để lưu các phần tử có category giống nhau
-
-  // useEffect(() => {
-  //   setWither(
-  //     slder_wrapper.current.scrollWidth -
-  //     slder_wrapper.current.offsetWidth
-  //   );
-  // });
 
   return (
     <div className="mt-[118px]  sm:mt-[195px] lg:mt-[195px] lg:w-[1200px] mx-[auto]">
@@ -215,7 +180,6 @@ const ProductList = () => {
                             key={category.id}
                           >
                             <h2
-                              key={category.id}
                               id={`accordion-open-heading-${category.id}`}
                             >
                               <div
@@ -268,30 +232,28 @@ const ProductList = () => {
                             >
                               <div className="">
                                 {fakeapiproductlist.map(
-                                  (product) => {
+                                  (product, index) => {
                                     if (
                                       product.categoryId ===
                                       category.id
                                     )
                                       return (
-                                        <p
-                                          key={
-                                            product.categoryId
-                                          }
+                                        <li
+                                          key={index}
                                           className={`${
                                             activeIndex ===
-                                            product.id
+                                            index
                                               ? "text-[#A1AB62]"
                                               : ""
                                           } text-[20px] text-[#505050] textSVNGilroy400 mb-[16px]`}
-                                          onClick={() => {
+                                          onClick={() =>
                                             handleItemClick(
-                                              product.categoryId
-                                            );
-                                          }}
+                                              index
+                                            )
+                                          }
                                         >
                                           {product.name}
-                                        </p>
+                                        </li>
                                       );
                                   }
                                 )}
